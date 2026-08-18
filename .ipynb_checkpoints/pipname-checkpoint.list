@@ -1,0 +1,6 @@
+pip install -U "mineru[pipeline]"
+pip install accelerate
+pip install sentencepiece
+pip install funasr
+pip install jieba
+读取wav转文本（需 pip install soundfile）

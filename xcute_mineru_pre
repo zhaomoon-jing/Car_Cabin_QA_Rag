@@ -1,0 +1,11 @@
+# 1 先设置环境变量（必须最最先）
+export HF_HOME=/root/autodl-tmp/models
+export HF_ENDPOINT=https://hf-mirror.com
+export OMP_NUM_THREADS=2
+export ORT_DISABLE_CPU_AFFINITY=1
+
+# 2 再激活conda
+conda activate py312
+
+# 3 再跑mineru
+mineru -p data/raw/卡罗拉锐放用户手册2023款.pdf  -o data/raw_out_put --low-vram

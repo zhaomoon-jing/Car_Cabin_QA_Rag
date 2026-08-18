@@ -1,0 +1,38 @@
+# Web服务框架
+fastapi==0.141.1
+uvicorn==0.52.1
+
+# LLM 原始方案 pytorch 推理（可选，不使用transformers推理可以删掉）
+torch==2.5.1
+transformers==4.44.2
+accelerate==1.14.0
+bitsandbytes>=0.41.1
+peft==0.12.0
+evaluate==0.4.6
+
+
+# 向量检索：chroma + BM25
+chromadb
+rank-bm25==0.2.2
+FlagEmbedding
+
+# 音频处理 & 降噪
+noisereduce>=0.1.10
+librosa>=1.0.0
+webrtcvad>=2.0.10
+#语音识别（FunASR）
+funasr==1.4.2                  
+modelscope>=1.9.0              
+soundfile>=0.12.1 
+
+
+
+# 文档解析（知识库PDF解析）
+PyPDF2>=3.0.1
+
+# 通用工具
+numpy==1.26.4
+sentence-transformers==3.0.1
+pydantic==2.13.4
+tqdm==4.70.0
+jsonlines

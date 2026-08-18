@@ -1,0 +1,16 @@
+mkdir -p /root/torch_pkgs && cd /root/torch_pkgs
+
+# 阿里云源，pip 自动找正确的 whl
+pip download torch==2.4.1 torchaudio==2.4.1 \
+  -f https://mirrors.aliyun.com/pytorch-wheels/cu121/ \
+  --no-deps -d /root/torch_pkgs
+
+# 看下载到了什么 + 校验完整性
+ls -la /root/torch_pkgs/
+python -c "
+import zipfile, glob
+for whl in glob.glob('/root/torch_pkgs/*.whl'):
+    names = zipfile.ZipFile(whl).namelist()
+    print(whl.split('/')[-1], '| 文件数:', len(names), '| 含_library:', any('torch/_library/' in n for n in names))
+"
+

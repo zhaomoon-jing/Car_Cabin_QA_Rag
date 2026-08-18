@@ -1,0 +1,5 @@
+# 基础安装
+pip install llama-cpp-python
+
+# 【ARM车载平台编译优化版本（可选）】
+# CMAKE_ARGS="-DLLAMA_ARM=on" pip install llama-cpp-python

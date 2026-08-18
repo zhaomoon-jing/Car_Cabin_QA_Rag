@@ -1,0 +1,46 @@
+# Web服务框架
+fastapi>=0.104.1
+uvicorn[standard]>=0.24.0
+
+# LLM 原始方案 pytorch 推理（可选，不使用transformers推理可以删掉）
+torch>=2.1.0
+transformers==4.42.4
+accelerate>=0.26.0
+bitsandbytes>=0.41.1
+peft>=0.8.2
+evaluate==0.4.6
+
+# llama.cpp GGUF推理（端侧车载优先推荐）
+llama-cpp-python>=0.2.60
+
+# 向量检索：FAISS + BM25
+faiss-cpu>=1.7.4
+rank_bm25>=0.2.2
+FlagEmbedding
+
+# 音频处理 & 降噪
+noisereduce>=0.1.10
+soundfile>=0.12.1
+librosa>=0.10.1
+webrtcvad>=2.0.10
+
+# 语音识别 Whisper
+openai-whisper>=20231117
+
+# 文档解析（知识库PDF解析）
+PyPDF2>=3.0.1
+
+# 通用工具
+numpy>=1.26.0
+sentence-transformers>=2.2.2  # Embedding向量模型
+pydantic>=2.4.2
+tqdm>=4.66.0
+
+
+
+chromadb
+sentence_transformers
+jsonlines
+rank_bm25
+evaluate
+openai-whisper

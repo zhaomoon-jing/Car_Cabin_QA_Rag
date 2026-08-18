@@ -1,0 +1,18 @@
+Traceback (most recent call last):
+  File "/root/autodl-tmp/doubao/car_rag/car_api.py", line 9, in <module>
+    from speech_asr.whisper_asr import audio2text
+  File "/root/autodl-tmp/doubao/car_rag/speech_asr/whisper_asr.py", line 1, in <module>
+    import whisper
+  File "/usr/local/miniconda3/envs/py312/lib/python3.12/site-packages/whisper/__init__.py", line 13, in <module>
+    from .model import ModelDimensions, Whisper
+  File "/usr/local/miniconda3/envs/py312/lib/python3.12/site-packages/whisper/model.py", line 14, in <module>
+    from .transcribe import transcribe as transcribe_function
+  File "/usr/local/miniconda3/envs/py312/lib/python3.12/site-packages/whisper/transcribe.py", line 21, in <module>
+    from .timing import add_word_timestamps
+  File "/usr/local/miniconda3/envs/py312/lib/python3.12/site-packages/whisper/timing.py", line 7, in <module>
+    import numba
+  File "/usr/local/miniconda3/envs/py312/lib/python3.12/site-packages/numba/__init__.py", line 59, in <module>
+    _ensure_critical_deps()
+  File "/usr/local/miniconda3/envs/py312/lib/python3.12/site-packages/numba/__init__.py", line 45, in _ensure_critical_deps
+    raise ImportError(msg)
+ImportError: Numba needs NumPy 2.4 or less. Got NumPy 2.5.

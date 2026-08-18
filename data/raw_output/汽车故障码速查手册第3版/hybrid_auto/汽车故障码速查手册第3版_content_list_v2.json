@@ -1,0 +1,3471 @@
+[
+    [
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "第一章 汽车自诊断概论"
+                    }
+                ],
+                "level": 2
+            },
+            "bbox": [
+                238,
+                149,
+                759,
+                185
+            ]
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "一、汽车自诊断的发展历程"
+                    }
+                ],
+                "level": 2
+            },
+            "bbox": [
+                132,
+                231,
+                426,
+                253
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "在最早期的汽车发动机控制系统中，用于对发动机进行控制的电控单元只能对发动机的运行提供非常简单的控制，而且并不具备自我检测（自诊断）的能力，因此不能向汽车维修人员提供任何有价值的信息。维修人员在维修这种车辆时，只能借助万用表等简单的测量仪器对控制单元接头各个电路的电压、电阻和电流进行测试，然后将测试的结果与设定值进行比较，从而对故障进行分析判断，由于获得的测试数据有限，很难对故障做出明确清晰的诊断。因此，以后开发的控制单元就增加了简单的自诊断的功能，即在控制发动机运行的同时，检测各个输入和输出信号，当发现在标定时所设定的故障现象，比如电路断路、电位的变化不正确或某些信号不合理时，将设定相应的故障诊断代码（即以一定的代码表示相应的信号故障）并点亮故障指示灯，提示驾驶员控制单元已经检查到了故障，应尽快将车送入维修厂维修，在对这些车辆进行维修时，维修人员可以用相应的仪器或采用一定的触发方式读取控制单元中存储的故障码，故障码为维修人员提示了进一步的故障检查方向，但由于此时的控制单元只能向维修人员提供故障码，仍不能满足维修人员对故障信息丰富程度的要求，因此在其后开发的控制单元功能中除了存储故障码的功能外又增加了数据流的功能，即利用仪器从数据流中读取故障码、运行的数据参数和执行双向指令（即通过仪器可向控制单元发出指令，驱动某些控制单元工作以便动态地检查这些部件）。以上这些系统被统称为OBD-I（第一代随车诊断系统）。OBD-I系统的故障码形式是不统一的，各个汽车制造厂根据所生产车型配备控制单元的水平和不同的用途需要，自行规定了各自不同形式的故障码，读取故障码的方法也各有不同。这种诊断方法有很大的缺点：首先是诊断方法过多过乱，由于各个汽车制造厂的车型自成体系，而且诊断方法随着生产年代还有不同的变化；其次是诊断的内容过于单一，不能适应汽车控制单元发展的需要。同时诊断装置不具有通用性，不能使用统一的诊断设备进行故障诊断，给汽车的售后服务、检测和维修带来很大不便，因此OBD-I系统不能适应现代汽车结构日趋先进、电子控制单元升级换代的要求，不能实现控制单元向标准化、智能化方向的发展。"
+                    }
+                ]
+            },
+            "bbox": [
+                85,
+                266,
+                905,
+                757
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "在 1994～1995 年，美国汽车工程师协会（SAE）为进一步推行更加严格的排放法规和加强 I/M（检查/维护）制度，要求从 1996 年起，所有在美国生产的汽车和所有进口到美国的其他各国生产的汽车都必须采用 OBD-Ⅱ（第二代随车诊断系统）。美国汽车工程师协会对该系统诊断座的位置、诊断座样式和插脚、故障码的编排与分类均做了详细的规定。该系统目前已被世界上绝大多数汽车生产厂家所采用。"
+                    }
+                ]
+            },
+            "bbox": [
+                82,
+                757,
+                902,
+                865
+            ]
+        },
+        {
+            "type": "page_header",
+            "content": {
+                "page_header_content": [
+                    {
+                        "type": "text",
+                        "content": "由图1所示表1-080"
+                    }
+                ]
+            },
+            "bbox": [
+                608,
+                105,
+                820,
+                127
+            ]
+        },
+        {
+            "type": "page_aside_text",
+            "content": {
+                "page_aside_text_content": [
+                    {
+                        "type": "text",
+                        "content": "第一章 汽车自诊断概论"
+                    }
+                ]
+            },
+            "bbox": [
+                934,
+                96,
+                971,
+                288
+            ]
+        },
+        {
+            "type": "page_number",
+            "content": {
+                "page_number_content": [
+                    {
+                        "type": "text",
+                        "content": "1"
+                    }
+                ]
+            },
+            "bbox": [
+                867,
+                878,
+                880,
+                892
+            ]
+        }
+    ],
+    [
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "二、OBD-Ⅱ系统的特点"
+                    }
+                ],
+                "level": 2
+            },
+            "bbox": [
+                131,
+                108,
+                391,
+                129
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "制定 OBD-Ⅱ标准的目的在很大程度上是出于对环境保护的考虑，美国加州空气资源委员会（CARB）在调查车辆运行状态的研究中发现，如果汽车的控制单元或排放系统发生了故障并且点亮故障指示灯进行提示时，汽车排放过量已经持续了相当长的时间，已经对环境造成了污染，为此必须制订出一种新的监测排放系统性能的标准，能及时掌握监测并控制排放的结果，这就是能对发动机的运行工况、电子控制系统和排放系统进行监控的OBD-Ⅱ随车诊断标准。该标准经美国联邦环保局认可实行后，证明对提高车辆的运行水平，控制排放对环境的污染方面起到了不可估量的作用。OBD-Ⅱ与传统的OBD-Ⅰ系统相比，后者只具有发现并记录部件和系统故障的能力，而前者则还具有监测和控制部件和系统的能力，以使车辆在运行时保持很低的排放水平。"
+                    }
+                ]
+            },
+            "bbox": [
+                87,
+                142,
+                905,
+                332
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "OBD-Ⅱ系统具有广泛的监测器功能，特别能监测汽车动力系统的运行工况。OBD-Ⅱ的监测器包括：发动机缺火监测器、催化器效率监测器、燃油系统监测器、加热型氧传感器监测器、废气再循环监测器、燃油蒸发控制系统监测器和二次空气喷射监测器等。"
+                    }
+                ]
+            },
+            "bbox": [
+                89,
+                335,
+                905,
+                397
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "OBD-Ⅱ系统具有统一的诊断座和统一的故障码，OBD-Ⅱ的诊断座统一为双排共16针，规定诊断座的安装位置在仪表板下方、转向柱和汽车中心线之间。诊断座的形式和各引脚的定义见图1-1。OBD-Ⅱ故障码均由5位英文字母和数字共同组成。"
+                    }
+                ]
+            },
+            "bbox": [
+                87,
+                400,
+                902,
+                462
+            ]
+        },
+        {
+            "type": "table",
+            "content": {
+                "image_source": {
+                    "path": "images/256ee676997795206dd9d3ed059f8db8f62eb0d7aae0a51cbdc75907370f1ce8.jpg"
+                },
+                "table_caption": [],
+                "table_footnote": [],
+                "html": "<table><tr><td rowspan=\"9\"><img src=\"images/614bd8a13d498cb644aa73b7cfdfd8f3ac94d615031e4f8178019dcd72f11951.jpg\"/></td><td>端字号</td><td>定义</td><td>端字号</td><td>定义</td></tr><tr><td>1</td><td>制造商规定</td><td>9</td><td>制造商规定</td></tr><tr><td>2</td><td>BUS+线,SAEJ1850</td><td>10</td><td>BUS-线,SAEJ1850</td></tr><tr><td>3</td><td>制造商规定</td><td>11</td><td>制造商规定</td></tr><tr><td>4</td><td>底盘搭铁</td><td>12</td><td>制造商规定</td></tr><tr><td>5</td><td>信号搭铁</td><td>13</td><td>制造商规定</td></tr><tr><td>6</td><td>制造商规定</td><td>14</td><td>制造商规定</td></tr><tr><td>7</td><td>K线,ISO9141</td><td>15</td><td>L线,ISO9141</td></tr><tr><td>8</td><td>制造商规定</td><td>16</td><td>汽车蓄电池正极</td></tr></table>",
+                "table_type": "complex_table",
+                "table_nest_level": 1
+            },
+            "bbox": [
+                104,
+                464,
+                885,
+                662
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "第一个字符：故障所属的系统"
+                    }
+                ]
+            },
+            "bbox": [
+                127,
+                681,
+                406,
+                699
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "- P=Powertrain 动力传动系统"
+                    }
+                ]
+            },
+            "bbox": [
+                127,
+                703,
+                413,
+                721
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "- B=Body 车身"
+                    }
+                ]
+            },
+            "bbox": [
+                129,
+                725,
+                278,
+                741
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "- C=Chassis 底盘"
+                    }
+                ]
+            },
+            "bbox": [
+                127,
+                746,
+                302,
+                763
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "- U=Network 网络"
+                    }
+                ]
+            },
+            "bbox": [
+                127,
+                766,
+                315,
+                784
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "第二个字符：故障类型"
+                    }
+                ]
+            },
+            "bbox": [
+                127,
+                788,
+                344,
+                804
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "第二个字符表明这个故障码是一个由 ISO/SAE 标准定义的故障码（Core DTCs），还是由车辆制造厂定义、尚未统一的故障码（Non-uniform Code）。"
+                    }
+                ]
+            },
+            "bbox": [
+                85,
+                810,
+                902,
+                848
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "- 车身系统组（Body system groupings）"
+                    }
+                ]
+            },
+            "bbox": [
+                127,
+                853,
+                492,
+                871
+            ]
+        },
+        {
+            "type": "page_aside_text",
+            "content": {
+                "page_aside_text_content": [
+                    {
+                        "type": "text",
+                        "content": "第一章 汽车自诊断概论"
+                    }
+                ]
+            },
+            "bbox": [
+                28,
+                101,
+                48,
+                225
+            ]
+        },
+        {
+            "type": "page_number",
+            "content": {
+                "page_number_content": [
+                    {
+                        "type": "text",
+                        "content": "2"
+                    }
+                ]
+            },
+            "bbox": [
+                102,
+                881,
+                119,
+                895
+            ]
+        }
+    ],
+    [
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "○ B0××× ISO/SAE 标准定义"
+                    }
+                ]
+            },
+            "bbox": [
+                127,
+                93,
+                425,
+                114
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "○ B1×××生产厂家定义"
+                    }
+                ]
+            },
+            "bbox": [
+                127,
+                116,
+                371,
+                136
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "○ B2×××生产厂家定义"
+                    }
+                ]
+            },
+            "bbox": [
+                127,
+                137,
+                369,
+                156
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "○ B3×××预留"
+                    }
+                ]
+            },
+            "bbox": [
+                129,
+                158,
+                285,
+                178
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "- 底盘系统组（Chassis system groupings）"
+                    }
+                ]
+            },
+            "bbox": [
+                129,
+                180,
+                519,
+                200
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "○ C0×××ISO/SAE 标准定义"
+                    }
+                ]
+            },
+            "bbox": [
+                129,
+                200,
+                418,
+                221
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "○ C1×××生产厂家定义"
+                    }
+                ]
+            },
+            "bbox": [
+                127,
+                223,
+                371,
+                242
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "○ C2×××生产厂家定义"
+                    }
+                ]
+            },
+            "bbox": [
+                127,
+                244,
+                371,
+                263
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "○ C3×××预留"
+                    }
+                ]
+            },
+            "bbox": [
+                127,
+                265,
+                287,
+                284
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "- 动力传动系统组（Powertrain system groupings）"
+                    }
+                ]
+            },
+            "bbox": [
+                127,
+                286,
+                591,
+                307
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "○ P0××× ISO/SAE 标准定义"
+                    }
+                ]
+            },
+            "bbox": [
+                127,
+                307,
+                425,
+                326
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "○ P1×××生产厂家定义"
+                    }
+                ]
+            },
+            "bbox": [
+                127,
+                328,
+                369,
+                349
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "○ P2××× ISO/SAE 标准定义"
+                    }
+                ]
+            },
+            "bbox": [
+                127,
+                350,
+                423,
+                370
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "○ P3×××生产厂家定义和 ISO/SAE 预留"
+                    }
+                ]
+            },
+            "bbox": [
+                127,
+                370,
+                524,
+                392
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "- 网络组（Network groupings）"
+                    }
+                ]
+            },
+            "bbox": [
+                127,
+                393,
+                423,
+                414
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "○ U0××× ISO/SAE 标准定义"
+                    }
+                ]
+            },
+            "bbox": [
+                127,
+                414,
+                426,
+                434
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "○ U1×××生产厂家定义"
+                    }
+                ]
+            },
+            "bbox": [
+                127,
+                436,
+                371,
+                456
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "○ U2×××生产厂家定义"
+                    }
+                ]
+            },
+            "bbox": [
+                127,
+                457,
+                371,
+                476
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "○ U3×××生产厂家定义和 ISO/SAE 预留"
+                    }
+                ]
+            },
+            "bbox": [
+                127,
+                479,
+                526,
+                499
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "第三个字符：子系统"
+                    }
+                ]
+            },
+            "bbox": [
+                127,
+                500,
+                327,
+                520
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "第三个字符定义了故障所属的子系统。"
+                    }
+                ]
+            },
+            "bbox": [
+                127,
+                521,
+                478,
+                542
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "第四和第五个字符"
+                    }
+                ]
+            },
+            "bbox": [
+                127,
+                543,
+                305,
+                562
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "故障码的最后两个字符代表了具体的故障对象和类型。"
+                    }
+                ]
+            },
+            "bbox": [
+                124,
+                565,
+                621,
+                586
+            ]
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "三、故障码的分析方法"
+                    }
+                ],
+                "level": 2
+            },
+            "bbox": [
+                127,
+                595,
+                374,
+                618
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "故障码分析就是在读取故障码的基础上，结合其他的检测结果对所读取的故障码进行比较分析，从而做出故障判断的一种方法。它是汽车电子控制系统故障诊断中最基本也是最简单的诊断方法之一。故障码分析是对汽车电子控制系统进行故障诊断的第一步。"
+                    }
+                ]
+            },
+            "bbox": [
+                85,
+                630,
+                902,
+                694
+            ]
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "1. 故障的确认"
+                    }
+                ],
+                "level": 2
+            },
+            "bbox": [
+                127,
+                693,
+                265,
+                711
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "任何故障码的设定都具有其相应的设定条件，当自诊断系统检测到某一个或几个信号超出其设定条件时，将设定故障码，一般来讲，对故障的确认有以下几种方法："
+                    }
+                ]
+            },
+            "bbox": [
+                84,
+                715,
+                900,
+                757
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "（1）值域判定法。电子控制单元接收到的输入信号超出规定的数值范围时，自诊断系统就判定该输入信号出现故障，比如某些车型的冷却液温度传感器设计成在正常使用温度范围  "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "-30\\sim120^{\\circ}C"
+                    },
+                    {
+                        "type": "text",
+                        "content": " 之间，传感器的输入电压为0.3~4.7V之间，所以当电控单元检测到冷却液温度传感器输入信号的电压小于0.15V或大于4.85V时，就会判定冷却液温度传感器信号系统的电路发生短路或断路故障。"
+                    }
+                ]
+            },
+            "bbox": [
+                80,
+                758,
+                902,
+                864
+            ]
+        },
+        {
+            "type": "page_aside_text",
+            "content": {
+                "page_aside_text_content": [
+                    {
+                        "type": "text",
+                        "content": "第一章 汽车自诊断概论"
+                    }
+                ]
+            },
+            "bbox": [
+                932,
+                93,
+                971,
+                288
+            ]
+        },
+        {
+            "type": "page_number",
+            "content": {
+                "page_number_content": [
+                    {
+                        "type": "text",
+                        "content": "3"
+                    }
+                ]
+            },
+            "bbox": [
+                865,
+                878,
+                882,
+                892
+            ]
+        }
+    ],
+    [
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "（2）时域判定法。当电子控制单元检测时发现某一输入信号在一定的时间范围内没有发生应该发生的变化或变化没有达到预先规定的次数时，自诊断系统就确定该信号出现故障。比如氧传感器在发动机达到正常温度且电控系统进入闭环运行状态后控制单元检测不到氧传感器的输出信号超过一段时间，或者氧传感器信号在0.45V上下没有变化的情况已经超过一定的时间，自诊断系统就判定氧传感器信号出现故障。"
+                    }
+                ]
+            },
+            "bbox": [
+                82,
+                96,
+                900,
+                204
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "（3）功能判定法。当电子控制单元向执行器发出驱动指令后，电子控制单元会检测相应的传感器或反馈信号的输出参数变化，如果输出信号没有按照程序规定的趋势产生变化，则自诊断系统就判定执行器或电路发生故障。比如在某些配备废气再循环系统的车型上，如果控制单元发出废气再循环阀（EGR）开启信号后，会检测压力传感器 MAP 输出信号是否产生了相应的变化，用以确定 EGR 是否动作，若没有变化，则确认 EGR 阀和 EGR 电路发生了故障。"
+                    }
+                ]
+            },
+            "bbox": [
+                82,
+                204,
+                902,
+                332
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "（4）逻辑判定法。控制单元对两个或两个以上具有相互联系的传感器进行数据比较，当发现两个传感器信号之间的逻辑关系违反设定条件时，就判定其中一个或两个传感器有故障。比如控制单元检测到发动机转速大于某个值时，节气门位置传感器输出信号小于某个值，则判定节气门位置传感器出现故障。"
+                    }
+                ]
+            },
+            "bbox": [
+                84,
+                332,
+                902,
+                420
+            ]
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "2. 故障的分类"
+                    }
+                ],
+                "level": 2
+            },
+            "bbox": [
+                127,
+                420,
+                268,
+                439
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "故障的出现形式有两种，一种是间歇性故障，它的特点是时有时无；另一种是持续性故障，它的特点是一旦发生就持续存在。在故障诊断过程中，间歇性故障被称为软故障（有些厂家称为延续或历史的故障），而持续性故障则被称为硬故障。由于间歇性故障的发生没有规律可循，所以间歇性故障比较难判断，在对间歇性故障进行诊断时，要重现间歇性故障产生的状态，比如采用人为的加热、晃动等措施才能重现故障发生的条件，同时还要用比较好的诊断设备来捕捉故障出现瞬间的各种数据参数变化才能对间歇性故障进行详尽的诊断。故障码也分为间歇性故障码（软故障码）和当前故障码（硬故障码）。间歇性故障码是曾经发生过而当前却不存在的故障码，当前故障码是当前仍存在的故障码。"
+                    }
+                ]
+            },
+            "bbox": [
+                85,
+                441,
+                905,
+                613
+            ]
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "3. 故障码的分析步骤"
+                    }
+                ],
+                "level": 2
+            },
+            "bbox": [
+                127,
+                615,
+                332,
+                633
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "进行故障码分析时，应按照以下步骤进行操作："
+                    }
+                ]
+            },
+            "bbox": [
+                90,
+                636,
+                561,
+                656
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "(1) 首先读取并记录所有的故障码；"
+                    }
+                ]
+            },
+            "bbox": [
+                127,
+                658,
+                460,
+                677
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "(2) 清除所有的故障码；"
+                    }
+                ]
+            },
+            "bbox": [
+                127,
+                678,
+                356,
+                699
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "（3）再次执行故障码读取程序，确认所有的故障码已被清除；"
+                    }
+                ]
+            },
+            "bbox": [
+                127,
+                700,
+                685,
+                720
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "（4）模拟故障产生的条件进行路试使故障重现；"
+                    }
+                ]
+            },
+            "bbox": [
+                127,
+                722,
+                564,
+                741
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "(5) 再次读取故障码并记录此时读取到的故障码；"
+                    }
+                ]
+            },
+            "bbox": [
+                127,
+                743,
+                584,
+                763
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "(6) 区分间歇性故障码和当前故障码；"
+                    }
+                ]
+            },
+            "bbox": [
+                127,
+                765,
+                480,
+                784
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "（7）区分与故障症状有关的故障码和与故障症状无关的故障码；"
+                    }
+                ]
+            },
+            "bbox": [
+                127,
+                785,
+                707,
+                806
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "（8）区分诸多故障码或相关故障码中的主要故障码（它可能是导致其他故障码产生的原因）；"
+                    }
+                ]
+            },
+            "bbox": [
+                87,
+                808,
+                905,
+                848
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "(9) 按照上述分析, 进一步精确检测故障码所代表的传感器、执行器或控制单元及相"
+                    }
+                ]
+            },
+            "bbox": [
+                127,
+                850,
+                905,
+                871
+            ]
+        },
+        {
+            "type": "page_number",
+            "content": {
+                "page_number_content": [
+                    {
+                        "type": "text",
+                        "content": "4"
+                    }
+                ]
+            },
+            "bbox": [
+                105,
+                881,
+                122,
+                896
+            ]
+        }
+    ],
+    [
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "关的电路状态，以便确定故障点发生的准确位置。"
+                    }
+                ]
+            },
+            "bbox": [
+                80,
+                96,
+                532,
+                114
+            ]
+        },
+        {
+            "type": "paragraph",
+            "content": {
+                "paragraph_content": [
+                    {
+                        "type": "text",
+                        "content": "在对故障码进行分析和检查的过程中，维修人员必须明确：反映某个系统故障的故障码所包含的内容不单单是指该传感器（或执行器）出现故障，而是表示该系统的信号出现不正常的现象，导致信号不正常的原因可能是系统中的部件、接头、线路或控制单元的任一部分出现故障。维修人员必须认识到：故障码仅仅是为维修人员提供了进一步检测的大方向，它仅仅是对故障范围和特性所给出的一种提示，并不能也不是告诉维修人员是车辆的什么地方和什么部件出现了故障。故障码是诊断的开始而不是诊断的最后结果。维修人员必须根据具体车型的维修资料（电路图、元器件位置、标准值、电控系统的工作原理等），利用各种可能的检测手段进行进一步的检测，才能对故障进行准确定位。"
+                    }
+                ]
+            },
+            "bbox": [
+                80,
+                116,
+                899,
+                288
+            ]
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "四、ISO/SAE 标准故障码"
+                    }
+                ],
+                "level": 2
+            },
+            "bbox": [
+                124,
+                300,
+                396,
+                321
+            ]
+        },
+        {
+            "type": "title",
+            "content": {
+                "title_content": [
+                    {
+                        "type": "text",
+                        "content": "1. 车载网络系统标准故障码"
+                    }
+                ],
+                "level": 2
+            },
+            "bbox": [
+                124,
+                334,
+                386,
+                351
+            ]
+        },
+        {
+            "type": "table",
+            "content": {
+                "image_source": {
+                    "path": "images/b8ede7dabe0888cf04fa617551662ac00511c2f3970a0a6f4d3984e06946270a.jpg"
+                },
+                "table_caption": [],
+                "table_footnote": [],
+                "html": "<table><tr><td>故障码</td><td>含义</td><td>故障码</td><td>含义</td></tr><tr><td>U0001</td><td>控制器区域网络(CAN)高速总线故障</td><td rowspan=\"2\">U0013</td><td rowspan=\"2\">控制器区域网络(CAN)中速总线(+)电压过低</td></tr><tr><td rowspan=\"2\">U0002</td><td rowspan=\"2\">控制器区域网络(CAN)高速总线性能不良</td></tr><tr><td rowspan=\"2\">U0014</td><td rowspan=\"2\">控制器区域网络(CAN)中速总线(+)电压过高</td></tr><tr><td rowspan=\"2\">U0003</td><td rowspan=\"2\">控制器区域网络(CAN)高速总线(+)断路</td></tr><tr><td rowspan=\"2\">U0015</td><td rowspan=\"2\">控制器区域网络(CAN)中速总线(-)断路</td></tr><tr><td rowspan=\"2\">U0004</td><td rowspan=\"2\">控制器区域网络(CAN)高速总线(+)电压过低</td></tr><tr><td rowspan=\"2\">U0016</td><td rowspan=\"2\">控制器区域网络(CAN)中速总线(-)电压过低</td></tr><tr><td rowspan=\"2\">U0005</td><td rowspan=\"2\">控制器区域网络(CAN)高速总线(+)电压过高</td></tr><tr><td rowspan=\"2\">U0017</td><td rowspan=\"2\">控制器区域网络(CAN)中速总线(-)电压过高</td></tr><tr><td rowspan=\"2\">U0006</td><td rowspan=\"2\">控制器区域网络(CAN)高速总线(-)断路</td></tr><tr><td rowspan=\"2\">U0018</td><td rowspan=\"2\">控制器区域网络(CAN)中速总线(-)对数据总线(+)短路</td></tr><tr><td rowspan=\"2\">U0007</td><td rowspan=\"2\">控制器区域网络(CAN)高速总线(-)电压过低</td></tr><tr><td>U0019</td><td>控制器区域网络(CAN)低速总线故障</td></tr><tr><td>U0008</td><td>控制器区域网络(CAN)高速总线(-)电压过高</td><td>U0020</td><td>控制器区域网络(CAN)低速总线性能不良</td></tr><tr><td>U0009</td><td>控制器区域网络(CAN)高速总线(-)对数据总线(+)短路</td><td>U0021</td><td>控制器区域网络(CAN)低速总线(+)断路</td></tr><tr><td>U0010</td><td>控制器区域网络(CAN)中速总线故障</td><td>U0022</td><td>控制器区域网络(CAN)低速总线(+)电压过低</td></tr><tr><td>U0011</td><td>控制器区域网络(CAN)中速总线性能不良</td><td>U0023</td><td>控制器区域网络(CAN)低速总线(+)电压过高</td></tr><tr><td>U0012</td><td>控制器区域网络(CAN)中速总线(+)断路</td><td>U0024</td><td>控制器区域网络(CAN)低速总线(-)断路</td></tr><tr><td>U0025</td><td>控制器区域网络(CAN)低速总线(-)电压过低</td><td>U0043</td><td>车辆区域网络(VAN)数据总线B(-)电压过低</td></tr><tr><td>U0026</td><td>控制器区域网络(CAN)低速总线(-)电压过高</td><td>U0044</td><td>车辆区域网络(VAN)数据总线B(-)电压过高</td></tr><tr><td>U0027</td><td>控制器区域网络(CAN)低速总线(-)对数据总线(+)短路</td><td>U0045</td><td>车辆区域网络(VAN)数据总线B(-)对数据总线(+)短路</td></tr><tr><td>U0028</td><td>车辆区域网络(VAN)数据总线A故障</td><td>U0046</td><td>车辆区域网络(VAN)数据总线C故障</td></tr><tr><td>U0029</td><td>车辆区域网络(VAN)数据总线A性能不良</td><td>U0047</td><td>车辆区域网络(VAN)数据总线C性能不良</td></tr><tr><td>U0030</td><td>车辆区域网络(VAN)数据总线A(+)断路</td><td>U0048</td><td>车辆区域网络(VAN)数据总线C(+)断路</td></tr><tr><td>U0031</td><td>车辆区域网络(VAN)数据总线A(+)电压过低</td><td>U0049</td><td>车辆区域网络(VAN)数据总线C(+)电压过低</td></tr><tr><td>U0032</td><td>车辆区域网络(VAN)数据总线A(+)电压过高</td><td>U0050</td><td>车辆区域网络(VAN)数据总线C(+)电压过高</td></tr><tr><td>U0033</td><td>车辆区域网络(VAN)数据总线A(-)断路</td><td>U0051</td><td>车辆区域网络(VAN)数据总线C(-)断路</td></tr><tr><td>U0034</td><td>车辆区域网络(VAN)数据总线A(-)电压过低</td><td>U0052</td><td>车辆区域网络(VAN)数据总线C(-)电压过低</td></tr><tr><td>U0035</td><td>车辆区域网络(VAN)数据总线A(-)电压过高</td><td>U0053</td><td>车辆区域网络(VAN)数据总线C(-)电压过高</td></tr><tr><td>U0036</td><td>车辆区域网络(VAN)数据总线A(-)对数据总线(+)短路</td><td>U0054</td><td>车辆区域网络(VAN)数据总线C(-)对数据总线(+)短路</td></tr><tr><td>U0037</td><td>车辆区域网络(VAN)数据总线B故障</td><td>U0055</td><td>车辆区域网络(VAN)数据总线D故障</td></tr><tr><td>U0038</td><td>车辆区域网络(VAN)数据总线B性能不良</td><td>U0056</td><td>车辆区域网络(VAN)数据总线D性能不良</td></tr><tr><td>U0039</td><td>车辆区域网络(VAN)数据总线B(+)断路</td><td>U0057</td><td>车辆区域网络(VAN)数据总线D(+)断路</td></tr><tr><td>U0040</td><td>车辆区域网络(VAN)数据总线B(+)电压过低</td><td>U0058</td><td>车辆区域网络(VAN)数据总线D(+)电压过低</td></tr><tr><td>U0041</td><td>车辆区域网络(VAN)数据总线B(+)电压过高</td><td>U0059</td><td>车辆区域网络(VAN)数据总线D(+)电压过高</td></tr><tr><td>U0042</td><td>车辆区域网络(VAN)数据总线B(-)断路</td><td>U0060</td><td>车辆区域网络(VAN)数据总线D(-)断路</td></tr><tr><td>U0061</td><td>车辆区域网络(VAN)数据总线D(-)电压过低</td><td>U0107</td><td>数据总线与节气门执行器控制模块通信中断</td></tr><tr><td rowspan=\"2\">U0062</td><td rowspan=\"2\">车辆区域网络(VAN)数据总线D(-)电压过高</td><td>U0108</td><td>数据总线与燃料选择控制模块通信中断</td></tr><tr><td>U0109</td><td>数据总线与燃油泵控制模块通信中断</td></tr><tr><td>U0063</td><td>车辆区域网络(VAN)数据总线D(-)对数据总线(+)短路</td><td>U0110</td><td>数据总线与驱动电机控制模块通信中断</td></tr><tr><td>U0064</td><td>车辆区域网络(VAN)数据总线E故障</td><td>U0111</td><td>数据总线与蓄电池电量控制模块A通信中断</td></tr><tr><td>U0065</td><td>车辆区域网络(VAN)数据总线E性能不良</td><td>U0112</td><td>数据总线与蓄电池电量控制模块B通信中断</td></tr><tr><td>U0066</td><td>车辆区域网络(VAN)数据总线E(+)断路</td><td>U0113</td><td>数据总线与排放控制信息通信中断</td></tr><tr><td>U0067</td><td>车辆区域网络(VAN)数据总线E(+)电压过低</td><td>U0114</td><td>数据总线与四轮驱动离合器控制模块通信中断</td></tr><tr><td>U0068</td><td>车辆区域网络(VAN)数据总线E(+)电压过高</td><td>U0115</td><td>数据总线与发动机控制模块(ECM)B通信中断</td></tr><tr><td>U0069</td><td>车辆区域网络(VAN)数据总线E(-)断路</td><td>U0121</td><td>数据总线与防抱死制动系统控制模块(ABS)通信中断</td></tr><tr><td rowspan=\"2\">U0070</td><td rowspan=\"2\">车辆区域网络(VAN)数据总线E(-)电压过低</td><td>U0122</td><td>数据总线与车辆动态控制模块通信中断</td></tr><tr><td>U0123</td><td>数据总线与横摆率传感器通信中断</td></tr><tr><td rowspan=\"2\">U0071</td><td rowspan=\"2\">车辆区域网络(VAN)数据总线E(-)电压过高</td><td>U0124</td><td>数据总线与横向加速度传感器通信中断</td></tr><tr><td>U0125</td><td>数据总线与多轴加速度传感器通信中断</td></tr><tr><td rowspan=\"2\">U0072</td><td rowspan=\"2\">车辆区域网络(VAN)数据总线E(-)对数据总线(+)短路</td><td>U0126</td><td>数据总线与转向盘位置传感器通信中断</td></tr><tr><td>U0127</td><td>数据总线与轮胎压力监测模块通信中断</td></tr><tr><td>U0073</td><td>控制模块数据总线关闭</td><td>U0128</td><td>数据总线与驻车制动控制模块通信中断</td></tr><tr><td rowspan=\"2\">U0100</td><td rowspan=\"2\">数据总线与发动机控制模块(ECM)通信中断</td><td>U0129</td><td>数据总线与制动系统控制模块通信中断</td></tr><tr><td>U0130</td><td>数据总线与转向力控制模块通信中断</td></tr><tr><td rowspan=\"2\">U0101</td><td rowspan=\"2\">数据总线与变速器控制模块(TCM)通信中断</td><td>U0131</td><td>数据总线与动力转向控制模块通信中断</td></tr><tr><td>U0132</td><td>数据总线与电控悬架行驶高度控制模块通信中断</td></tr><tr><td>U0102</td><td>数据总线与分动器控制模块通信中断</td><td>U0140</td><td>数据总线与车身控制模块通信中断</td></tr><tr><td>U0103</td><td>数据总线与换挡控制模块通信中断</td><td>U0141</td><td>数据总线与车身控制模块A通信中断</td></tr><tr><td>U0104</td><td>数据总线与定速巡航控制模块通信中断</td><td>U0142</td><td>数据总线与车身控制模块B通信中断</td></tr><tr><td>U0105</td><td>数据总线与喷油器控制模块通信中断</td><td>U0143</td><td>数据总线与车身控制模块C通信中断</td></tr><tr><td>U0106</td><td>数据总线与预热塞控制模块通信中断</td><td>U0144</td><td>数据总线与车身控制模块D通信中断</td></tr><tr><td>U0145</td><td>数据总线与车身控制模块E通信中断</td><td rowspan=\"2\">U0176</td><td rowspan=\"2\">数据总线与安全气囊(SRS)传感器G通信中断</td></tr><tr><td>U0146</td><td>数据总线与网关A通信中断</td></tr><tr><td>U0147</td><td>数据总线与网关B通信中断</td><td rowspan=\"2\">U0177</td><td rowspan=\"2\">数据总线与安全气囊(SRS)传感器H通信中断</td></tr><tr><td>U0148</td><td>数据总线与网关C通信中断</td></tr><tr><td>U0149</td><td>数据总线与网关D通信中断</td><td rowspan=\"2\">U0178</td><td rowspan=\"2\">数据总线与安全气囊(SRS)传感器I通信中断</td></tr><tr><td>U0150</td><td>数据总线与网关E通信中断</td></tr><tr><td>U0151</td><td>数据总线与安全气囊(SRS)控制模块通信中断</td><td>U0179</td><td>数据总线与安全气囊(SRS)传感器J通信中断</td></tr><tr><td rowspan=\"2\">U0152</td><td rowspan=\"2\">数据总线与左侧安全气囊(SRS)控制模块通信中断</td><td>U0180</td><td>数据总线与自动照明控制模块通信中断</td></tr><tr><td>U0181</td><td>数据总线与前照灯水平控制模块通信中断</td></tr><tr><td rowspan=\"2\">U0153</td><td rowspan=\"2\">数据总线与右侧安全气囊(SRS)控制模块通信中断</td><td>U0182</td><td>数据总线与前部车灯控制模块通信中断</td></tr><tr><td>U0183</td><td>数据总线与后部车灯控制模块通信中断</td></tr><tr><td rowspan=\"2\">U0154</td><td rowspan=\"2\">数据总线与安全气囊(SRS)占用感应控制模块通信中断</td><td>U0184</td><td>数据总线与收音机通信中断</td></tr><tr><td>U0185</td><td>数据总线与天线模块通信中断</td></tr><tr><td>U0155</td><td>数据总线与仪表控制模块通信中断</td><td>U0186</td><td>数据总线与音响单元输出放大器通信中断</td></tr><tr><td>U0156</td><td>数据总线与信息中心A通信中断</td><td rowspan=\"2\">U0187</td><td rowspan=\"2\">数据总线与数字光盘播放器/换盘器模块A通信中断</td></tr><tr><td>U0157</td><td>数据总线与信息中心B通信中断</td></tr><tr><td>U0158</td><td>数据总线与平视显示系统通信中断</td><td rowspan=\"2\">U0188</td><td rowspan=\"2\">数据总线与数字光盘播放器/换盘器模块B通信中断</td></tr><tr><td>U0159</td><td>数据总线与驻车辅助制动控制模块A通信中断</td></tr><tr><td>U0160</td><td>数据总线与音响报警控制模块通信中断</td><td>U0189</td><td>数据总线与数字光盘播放器/换盘器模块C通信中断</td></tr><tr><td>U0170</td><td>数据总线与安全气囊(SRS)传感器A通信中断</td><td>U0190</td><td>数据总线与数字光盘播放器/换盘器模块D通信中断</td></tr><tr><td rowspan=\"2\">U0171</td><td rowspan=\"2\">数据总线与安全气囊(SRS)传感器B通信中断</td><td>U0191</td><td>数据总线与车载电视系统通信中断</td></tr><tr><td>U0192</td><td>数据总线与个人电脑通信中断</td></tr><tr><td rowspan=\"2\">U0172</td><td rowspan=\"2\">数据总线与安全气囊(SRS)传感器C通信中断</td><td>U0193</td><td>数据总线与数字音响控制模块A通信中断</td></tr><tr><td>U0194</td><td>数据总线与数字音响控制模块B通信中断</td></tr><tr><td rowspan=\"2\">U0173</td><td rowspan=\"2\">数据总线与安全气囊(SRS)传感器D通信中断</td><td>U0195</td><td>数据总线与娱乐系统接收器模块通信中断</td></tr><tr><td>U0196</td><td>数据总线与后部娱乐系统控制模块通信中断</td></tr><tr><td>U0174</td><td>数据总线与安全气囊(SRS)传感器E通信中断</td><td>U0197</td><td>数据总线与车载电话控制模块通信中断</td></tr><tr><td>U0175</td><td>数据总线与安全气囊(SRS)传感器F通信中断</td><td>U0198</td><td>数据总线与远程信息通信控制模块通信中断</td></tr><tr><td>U0199</td><td>数据总线与车门控制模块A通信中断</td><td rowspan=\"2\">U0232</td><td rowspan=\"2\">数据总线与左侧障碍探测控制模块通信中断</td></tr><tr><td>U0200</td><td>数据总线与车门控制模块B通信中断</td></tr><tr><td>U0201</td><td>数据总线与车门控制模块C通信中断</td><td rowspan=\"2\">U0233</td><td rowspan=\"2\">数据总线与右侧障碍探测控制模块通信中断</td></tr><tr><td>U0202</td><td>数据总线与车门控制模块D通信中断</td></tr><tr><td>U0203</td><td>数据总线与车门控制模块E通信中断</td><td>U0234</td><td>数据总线与便利设备恢复模块通信中断</td></tr><tr><td>U0204</td><td>数据总线与车门控制模块F通信中断</td><td rowspan=\"2\">U0235</td><td rowspan=\"2\">数据总线与定速巡航系统前车距离传感器通信中断</td></tr><tr><td>U0205</td><td>数据总线与车门控制模块G通信中断</td></tr><tr><td>U0206</td><td>数据总线与车篷控制模块通信中断</td><td>U0300</td><td>控制模块内部软件不兼容</td></tr><tr><td>U0207</td><td>数据总线与活动式车顶控制模块通信中断</td><td>U0301</td><td>发动机控制模块(ECM)软件不兼容</td></tr><tr><td>U0208</td><td>数据总线与座椅调节控制模块A通信中断</td><td>U0302</td><td>变速器控制模块(TCM)软件不兼容</td></tr><tr><td>U0209</td><td>数据总线与座椅调节控制模块B通信中断</td><td>U0303</td><td>分动器控制模块软件不兼容</td></tr><tr><td>U0210</td><td>数据总线与座椅调节控制模块C通信中断</td><td>U0304</td><td>换挡模块软件不兼容</td></tr><tr><td>U0211</td><td>数据总线与座椅调节控制模块D通信中断</td><td>U0305</td><td>定速巡航控制模块软件不兼容</td></tr><tr><td>U0212</td><td>数据总线与转向柱控制模块通信中断</td><td>U0306</td><td>喷油器控制模块软件不兼容</td></tr><tr><td>U0213</td><td>数据总线与反光镜控制模块A通信中断</td><td>U0307</td><td>预热塞控制模块软件不兼容</td></tr><tr><td>U0214</td><td>数据总线与遥控功能启用通信中断</td><td>U0308</td><td>节气门执行器控制模块软件不兼容</td></tr><tr><td>U0215</td><td>数据总线与车门触点开关A通信中断</td><td>U0309</td><td>燃料选择控制模块软件不兼容</td></tr><tr><td>U0216</td><td>数据总线与车门触点开关B通信中断</td><td>U0310</td><td>燃油泵控制模块软件不兼容</td></tr><tr><td>U0217</td><td>数据总线与车门触点开关C通信中断</td><td>U0311</td><td>驱动电机控制模块软件不兼容</td></tr><tr><td>U0218</td><td>数据总线与车门触点开关D通信中断</td><td>U0312</td><td>蓄电池能量控制模块A软件不兼容</td></tr><tr><td>U0219</td><td>数据总线与车门触点开关E通信中断</td><td>U0313</td><td>蓄电池能量控制模块B软件不兼容</td></tr><tr><td>U0220</td><td>数据总线与车门触点开关F通信中断</td><td>U0314</td><td>四轮驱动离合器控制模块软件不兼容</td></tr><tr><td>U0221</td><td>数据总线与车门触点开关G通信中断</td><td>U0315</td><td>ABS系统控制模块软件不兼容</td></tr><tr><td>U0222</td><td>数据总线与电动车窗电机A通信中断</td><td>U0316</td><td>车辆动态控制模块软件不兼容</td></tr><tr><td>U0223</td><td>数据总线与电动车窗电机B通信中断</td><td>U0317</td><td>驻车制动控制模块软件不兼容</td></tr><tr><td>U0224</td><td>数据总线与电动车窗电机C通信中断</td><td>U0318</td><td>制动系统控制模块软件不兼容</td></tr><tr><td>U0225</td><td>数据总线与电动车窗电机D通信中断</td><td>U0319</td><td>转向力控制模块软件不兼容</td></tr><tr><td>U0226</td><td>数据总线与电动车窗电机E通信中断</td><td>U0320</td><td>动力转向控制模块软件不兼容</td></tr><tr><td>U0227</td><td>数据总线与电动车窗电机F通信中断</td><td>U0321</td><td>车辆悬架高度控制模块软件不兼容</td></tr><tr><td>U0228</td><td>数据总线与电动车窗电机G通信中断</td><td>U0322</td><td>车身控制模块软件不兼容</td></tr><tr><td>U0229</td><td>数据总线与可加热式转向盘模块通信中断</td><td>U0323</td><td>仪表板控制模块软件不兼容</td></tr><tr><td>U0230</td><td>数据总线与车辆背门控制模块通信中断</td><td>U0324</td><td>空调控制模块软件不兼容</td></tr><tr><td>U0231</td><td>数据总线与雨水传感器控制模块通信中断</td><td>U0325</td><td>辅助暖风控制模块软件不兼容</td></tr><tr><td>U0326</td><td>防非法启动控制模块软件不兼容</td><td>U0413</td><td>蓄电池能量控制模块B接收到无效数据</td></tr><tr><td>U0327</td><td>报警控制模块软件不兼容</td><td>U0414</td><td>四轮驱动离合器控制模块接收到无效数据</td></tr><tr><td>U0328</td><td>转向位置传感器控制模块软件不兼容</td><td>U0415</td><td>ABS系统控制模块接收到无效数据</td></tr><tr><td>U0329</td><td>转向柱控制模块软件不兼容</td><td>U0416</td><td>车辆动态控制模块接收到无效数据</td></tr><tr><td>U0330</td><td>轮胎压力监测模块软件不兼容</td><td>U0417</td><td>驻车制动控制模块接收到无效数据</td></tr><tr><td>U0331</td><td>车身控制模块A软件不兼容</td><td>U0418</td><td>制动系统控制模块接收到无效数据</td></tr><tr><td>U0332</td><td>多轴加速传感器模块软件不兼容</td><td>U0419</td><td>转向力控制模块接收到无效数据</td></tr><tr><td>U0400</td><td>接收到无效数据</td><td>U0420</td><td>动力转向控制模块接收到无效数据</td></tr><tr><td>U0401</td><td>发动机控制模块(ECM)接收到无效数据</td><td>U0421</td><td>车辆悬架高度控制模块接收到无效数据</td></tr><tr><td>U0402</td><td>变速器控制模块(TCM)接收到无效数据</td><td>U0422</td><td>车身控制模块接收到无效数据</td></tr><tr><td>U0403</td><td>分动器控制模块接收到无效数据</td><td>U0423</td><td>仪表板控制模块接收到无效数据</td></tr><tr><td>U0404</td><td>换挡模块接收到无效数据</td><td>U0424</td><td>空调控制模块接收到无效数据</td></tr><tr><td>U0405</td><td>定速巡航控制模块接收到无效数据</td><td>U0425</td><td>辅助暖风控制模块接收到无效数据</td></tr><tr><td>U0406</td><td>喷油器控制模块接收到无效数据</td><td>U0426</td><td>防非法启动控制模块接收到无效数据</td></tr><tr><td>U0407</td><td>预热塞控制模块接收到无效数据</td><td>U0427</td><td>报警控制模块接收到无效数据</td></tr><tr><td>U0408</td><td>节气门执行器控制模块接收到无效数据</td><td>U0428</td><td>转向位置传感器控制模块接收到无效数据</td></tr><tr><td>U0409</td><td>燃料选择控制模块接收到无效数据</td><td>U0429</td><td>转向柱控制模块接收到无效数据</td></tr><tr><td>U0410</td><td>燃油泵控制模块接收到无效数据</td><td>U0430</td><td>轮胎压力监测模块接收到无效数据</td></tr><tr><td>U0411</td><td>驱动电机控制模块接收到无效数据</td><td>U0431</td><td>车身控制模块A接收到无效数据</td></tr><tr><td>U0412</td><td>蓄电池能量控制模块A接收到无效数据</td><td></td><td></td></tr></table>",
+                "table_type": "complex_table",
+                "table_nest_level": 1
+            },
+            "bbox": [
+                92,
+                356,
+                887,
+                860
+            ]
+        },
+        {
+            "type": "page_aside_text",
+            "content": {
+                "page_aside_text_content": [
+                    {
+                        "type": "text",
+                        "content": "第一章 汽车自诊断概论"
+                    }
+                ]
+            },
+            "bbox": [
+                924,
+                92,
+                959,
+                285
+            ]
+        },
+        {
+            "type": "page_number",
+            "content": {
+                "page_number_content": [
+                    {
+                        "type": "text",
+                        "content": "5"
+                    }
+                ]
+            },
+            "bbox": [
+                865,
+                875,
+                882,
+                889
+            ]
+        }
+    ],
+    [
+        {
+            "type": "table",
+            "content": {
+                "image_source": {
+                    "path": "images/"
+                },
+                "table_caption": [],
+                "table_footnote": [],
+                "html": "",
+                "table_type": "simple_table",
+                "table_nest_level": 1
+            },
+            "bbox": [
+                99,
+                122,
+                895,
+                872
+            ]
+        },
+        {
+            "type": "page_header",
+            "content": {
+                "page_header_content": [
+                    {
+                        "type": "text",
+                        "content": "(1)   "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\frac{1}{2}"
+                    },
+                    {
+                        "type": "text",
+                        "content": "  =   "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\frac{1}{2}"
+                    },
+                    {
+                        "type": "text",
+                        "content": "  =   "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\frac{1}{2}"
+                    },
+                    {
+                        "type": "text",
+                        "content": "  =   "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\frac{1}{2}"
+                    }
+                ]
+            },
+            "bbox": [
+                431,
+                43,
+                509,
+                55
+            ]
+        },
+        {
+            "type": "page_aside_text",
+            "content": {
+                "page_aside_text_content": [
+                    {
+                        "type": "text",
+                        "content": "第一章 汽车自诊断概论"
+                    }
+                ]
+            },
+            "bbox": [
+                28,
+                105,
+                48,
+                230
+            ]
+        },
+        {
+            "type": "page_number",
+            "content": {
+                "page_number_content": [
+                    {
+                        "type": "text",
+                        "content": "6"
+                    }
+                ]
+            },
+            "bbox": [
+                107,
+                885,
+                124,
+                898
+            ]
+        }
+    ],
+    [
+        {
+            "type": "table",
+            "content": {
+                "image_source": {
+                    "path": "images/"
+                },
+                "table_caption": [],
+                "table_footnote": [],
+                "html": "",
+                "table_type": "simple_table",
+                "table_nest_level": 1
+            },
+            "bbox": [
+                94,
+                120,
+                889,
+                860
+            ]
+        },
+        {
+            "type": "page_aside_text",
+            "content": {
+                "page_aside_text_content": [
+                    {
+                        "type": "text",
+                        "content": "第一章 汽车自诊断概论"
+                    }
+                ]
+            },
+            "bbox": [
+                929,
+                99,
+                966,
+                294
+            ]
+        },
+        {
+            "type": "page_number",
+            "content": {
+                "page_number_content": [
+                    {
+                        "type": "text",
+                        "content": "7"
+                    }
+                ]
+            },
+            "bbox": [
+                863,
+                883,
+                878,
+                897
+            ]
+        }
+    ],
+    [
+        {
+            "type": "table",
+            "content": {
+                "image_source": {
+                    "path": "images/"
+                },
+                "table_caption": [],
+                "table_footnote": [],
+                "html": "",
+                "table_type": "simple_table",
+                "table_nest_level": 1
+            },
+            "bbox": [
+                104,
+                123,
+                897,
+                866
+            ]
+        },
+        {
+            "type": "page_aside_text",
+            "content": {
+                "page_aside_text_content": [
+                    {
+                        "type": "text",
+                        "content": "第一章 汽车自诊断概论"
+                    }
+                ]
+            },
+            "bbox": [
+                33,
+                107,
+                52,
+                229
+            ]
+        },
+        {
+            "type": "page_header",
+            "content": {
+                "page_header_content": [
+                    {
+                        "type": "text",
+                        "content": "1.   "
+                    },
+                    {
+                        "type": "equation_inline",
+                        "content": "\\therefore P_{1} = \\frac{1}{2} \\times 10^{-2}"
+                    }
+                ]
+            },
+            "bbox": [
+                433,
+                41,
+                566,
+                53
+            ]
+        },
+        {
+            "type": "page_number",
+            "content": {
+                "page_number_content": [
+                    {
+                        "type": "text",
+                        "content": "8"
+                    }
+                ]
+            },
+            "bbox": [
+                110,
+                885,
+                126,
+                898
+            ]
+        }
+    ],
+    [
+        {
+            "type": "table",
+            "content": {
+                "image_source": {
+                    "path": "images/"
+                },
+                "table_caption": [],
+                "table_footnote": [],
+                "html": "",
+                "table_type": "simple_table",
+                "table_nest_level": 1
+            },
+            "bbox": [
+                92,
+                116,
+                887,
+                858
+            ]
+        },
+        {
+            "type": "page_number",
+            "content": {
+                "page_number_content": [
+                    {
+                        "type": "text",
+                        "content": "9"
+                    }
+                ]
+            },
+            "bbox": [
+                858,
+                879,
+                873,
+                895
+            ]
+        }
+    ],
+    [
+        {
+            "type": "table",
+            "content": {
+                "image_source": {
+                    "path": "images/"
+                },
+                "table_caption": [],
+                "table_footnote": [],
+                "html": "",
+                "table_type": "simple_table",
+                "table_nest_level": 1
+            },
+            "bbox": [
+                102,
+                123,
+                895,
+                583
+            ]
+        },
+        {
+            "type": "table",
+            "content": {
+                "image_source": {
+                    "path": "images/cc193d6777692925bbc7c13d479adb715815e74c35c9f3c946c4bb6f89b61519.jpg"
+                },
+                "table_caption": [
+                    {
+                        "type": "text",
+                        "content": "2. ISO/SAE 动力传动系统标准故障码（P0000～P0999）"
+                    }
+                ],
+                "table_footnote": [],
+                "html": "<table><tr><td>故障码</td><td>含义</td><td>可能的故障原因</td></tr><tr><td>P0000</td><td>无故障</td><td>—</td></tr><tr><td>P0001</td><td>燃油油量调节器控制-电路断路</td><td rowspan=\"2\">燃油油量调节器电路故障</td></tr><tr><td>P0002</td><td>燃油油量调节器控制-电路范围/性能故障</td></tr><tr><td>P0003</td><td>燃油油量调节器控制-电路电压过低</td><td>电路对接地短路</td></tr><tr><td>P0004</td><td>燃油油量调节器控制-电路电压过高</td><td>电路对蓄电池电压短路</td></tr><tr><td>P0005</td><td>燃油切断阀-电路断路</td><td>燃油切断阀电路故障</td></tr><tr><td>P0006</td><td>燃油切断阀-电路电压过低</td><td>燃油切断阀电路对接地短路</td></tr><tr><td>P0007</td><td>燃油切断阀-电路电压过高</td><td>燃油切断阀电路对蓄电池电压短路</td></tr><tr><td>P0008</td><td>发动机位置系统,气缸列1-性能故障</td><td rowspan=\"2\">机械故障</td></tr><tr><td>P0009</td><td>发动机位置系统,气缸列2-性能故障</td></tr><tr><td>P0010</td><td>气缸列1,左前进气门凸轮轴位置执行器-电路故障</td><td>执行器故障;执行器电路故障;发动机控制模块故障</td></tr><tr><td>P0011</td><td>气缸列1,左前进气凸轮轴位置-正时提前性能故障</td><td rowspan=\"2\">气门正时故障;发动机机械故障</td></tr><tr><td>P0012</td><td>气缸列1,左前进气凸轮轴位置-正时延迟</td></tr><tr><td>P0013</td><td>气缸列1,左前排气门凸轮轴位置执行器-电路故障</td><td>执行器故障;执行器电路故障;发动机控制模块故障</td></tr><tr><td>P0014</td><td>气缸列1,右后排气凸轮轴位置-正时提前性能故障</td><td rowspan=\"2\">气门正时故障;发动机机械故障</td></tr><tr><td>P0015</td><td>气缸列1,右后排气凸轮轴位置-正时延迟</td></tr><tr><td>P0016</td><td>气缸列1,曲轴位置传感器A/凸轮轴位置传感器A信号关系错乱</td><td rowspan=\"4\">机械故障;曲轴位置传感器故障;凸轮轴位置传感器故障</td></tr><tr><td>P0017</td><td>气缸列1,曲轴位置传感器B/凸轮轴位置传感器B信号关系错乱</td></tr><tr><td>P0018</td><td>气缸列2,曲轴位置传感器A/凸轮轴位置传感器A信号关系错乱</td></tr><tr><td>P0019</td><td>气缸列2,曲轴位置传感器B/凸轮轴位置传感器B信号关系错乱</td></tr><tr><td>P0020</td><td>气缸列2,左前进气凸轮轴位置执行器-电路故障</td><td>执行器故障;执行器电路故障;发动机控制模块故障</td></tr><tr><td>P0021</td><td>气缸列2,左前进气凸轮轴位置-正时提前性能故障</td><td rowspan=\"2\">气门正时故障;发动机机械故障;凸轮轴位置执行器故障</td></tr><tr><td>P0022</td><td>气缸列2,左前进气凸轮轴位置-正时延迟</td></tr><tr><td>P0023</td><td>气缸列2,右后排气凸轮轴位置执行器-电路故障</td><td>执行器故障;发动机控制模块故障</td></tr><tr><td>P0024</td><td>气缸列2,右后排气凸轮轴位置-正时提前性能故障</td><td>气门正时;发动机机械故障;执行器故障</td></tr><tr><td>P0025</td><td>气缸列2,右后排气凸轮轴位置-正时延迟</td><td>气门正时;发动机机械故障;执行器故障</td></tr><tr><td>P0026</td><td>气缸列1,进气门控制电磁阀范围/性能故障</td><td>进气门控制电磁阀</td></tr><tr><td>P0027</td><td>气缸列1,排气门控制电磁阀范围/性能故障</td><td>排气门控制电磁阀</td></tr><tr><td>P0028</td><td>气缸列2,进气门控制电磁阀范围/性能故障</td><td>进气门控制电磁阀</td></tr><tr><td>P0029</td><td>气缸列2,排气门控制电磁阀范围/性能故障</td><td>排气门控制电磁阀</td></tr><tr><td>P0030</td><td>气缸列1,氧传感器1,加热器控制-电路故障</td><td>氧传感器故障;发动机控制模块故障</td></tr><tr><td>P0031</td><td>气缸列1,氧传感器1,加热器控制-电路电压过低</td><td>氧传感器电路对接地短路</td></tr><tr><td>P0032</td><td>气缸列1,氧传感器1,加热器控制-电路电压过高</td><td>氧传感器电路对蓄电池电压短路</td></tr><tr><td>P0033</td><td>涡轮增压器旁通阀-电路故障</td><td>涡轮增压废气调节阀故障;发动机控制模块故障</td></tr><tr><td>P0034</td><td>涡轮增压器旁通阀-电路电压过低</td><td>电路对接地短路</td></tr><tr><td>P0035</td><td>涡轮增压器旁通阀-电路电压过高</td><td>电路对蓄电池电压短路</td></tr><tr><td>P0036</td><td>气缸列1,氧传感器2,加热器控制-电路故障</td><td>氧传感器故障;发动机控制模块故障</td></tr><tr><td>P0037</td><td>气缸列1,氧传感器2,加热器控制-电路电压过低</td><td>氧传感器电路对接地短路</td></tr><tr><td>P0038</td><td>气缸列1,氧传感器2,加热器控制-电路电压过高</td><td>氧传感器电路对蓄电池电压短路</td></tr><tr><td>P0039</td><td>涡轮增压器旁通阀范围/性能故障</td><td>涡轮增压器旁通阀故障</td></tr><tr><td>P0040</td><td>气缸列1,氧传感器1/气缸列2,氧传感器1信号错乱</td><td>氧传感器电路故障</td></tr><tr><td>P0041</td><td>气缸列1,氧传感器2/气缸列2,氧传感器2信号错乱</td><td>氧传感器电路故障</td></tr><tr><td>P0042</td><td>气缸列1,氧传感器3,加热器控制-电路故障</td><td>电路故障;发动机控制模块故障</td></tr><tr><td>P0043</td><td>气缸列1,氧传感器3,加热器控制-电路电压过低</td><td>电路对接地短路</td></tr><tr><td>P0044</td><td>气缸列1,氧传感器3,加热器控制-电路电压过高</td><td>电路对蓄电池正极短路</td></tr><tr><td>P0045</td><td>涡轮增压器控制电磁阀-电路断路</td><td>涡轮增压器电路故障</td></tr><tr><td>P0046</td><td>涡轮增压器控制电磁阀-电路范围/性能故障</td><td>涡轮增压器电路故障;涡轮增压器机械故障</td></tr><tr><td>P0047</td><td>涡轮增压器控制电磁阀-电路电压过低</td><td>电路对接地短路</td></tr><tr><td>P0048</td><td>涡轮增压器控制电磁阀-电路电压过高</td><td>电路对蓄电池电压短路</td></tr><tr><td>P0049</td><td>涡轮增压器涡轮转速过高</td><td>涡轮增压器机械故障</td></tr><tr><td>P0050</td><td>气缸列2,氧传感器1,加热器控制-电路故障</td><td>电路故障;发动机控制模块故障</td></tr><tr><td>P0051</td><td>气缸列2,氧传感器1,加热器控制-电路电压过低</td><td>电路对接地短路</td></tr><tr><td>P0052</td><td>气缸列2,氧传感器1,加热器控制-电路电压过高</td><td>电路对蓄电池正极短路</td></tr><tr><td>P0053</td><td>气缸列1,氧传感器1,加热器电阻故障</td><td rowspan=\"3\">电路故障,氧传感器故障</td></tr><tr><td>P0054</td><td>气缸列1,氧传感器2,加热器电阻故障</td></tr><tr><td>P0055</td><td>气缸列1,氧传感器3,加热器电阻故障</td></tr><tr><td>P0056</td><td>气缸列2,氧传感器2,加热器控制-电路故障</td><td>电路故障;发动机控制模块故障</td></tr><tr><td>P0057</td><td>气缸列2,氧传感器2,加热器控制-电路电压过低</td><td>电路对接地短路</td></tr><tr><td>P0058</td><td>气缸列2,氧传感器2,加热器控制-电路电压过高</td><td>电路对蓄电池正极短路</td></tr><tr><td>P0059</td><td>气缸列2,氧传感器1,加热器电阻故障</td><td rowspan=\"3\">电路故障,氧传感器故障</td></tr><tr><td>P0060</td><td>气缸列2,氧传感器2,加热器电阻故障</td></tr><tr><td>P0061</td><td>气缸列2,氧传感器3,加热器电阻故障</td></tr><tr><td>P0062</td><td>气缸列2,氧传感器3,加热器控制-电路故障</td><td>电路故障;发动机控制模块故障</td></tr><tr><td>P0063</td><td>气缸列2,氧传感器3,加热器控制-电路电压过低</td><td>电路对接地短路</td></tr><tr><td>P0064</td><td>气缸列2,氧传感器3,加热器控制-电路电压过高</td><td>电路对蓄电池正极短路</td></tr><tr><td>P0065</td><td>空气辅助喷射器-范围/性能故障</td><td>空气辅助喷射器故障</td></tr><tr><td>P0066</td><td>空气辅助喷射器-电路故障/电路电压过低</td><td>空气辅助喷射器故障;电路对接地短路;发动机控制模块故障</td></tr><tr><td>P0067</td><td>空气辅助喷射器-电路电压过高</td><td>电路对蓄电池电压短路;电路对接地短路;发动机控制模块故障</td></tr><tr><td>P0068</td><td>进气歧管绝对压力传感器/空气流量传感器-节气门位置信号关系错乱</td><td>传感器电路故障、进气歧管绝对压力传感器故障;空气流量传感器故障</td></tr><tr><td>P0069</td><td>进气歧管绝对压力传感器/大气压力传感器-信号关系不正确</td><td>进气歧管绝对压力传感器故障;机械故障</td></tr><tr><td>P0070</td><td>车外空气温度传感器-电路故障</td><td>车外空气温度传感器电路故障;发动机控制模块故障</td></tr><tr><td>P0071</td><td>车外空气温度传感器范围/性能故障</td><td>车外空气温度传感器故障</td></tr><tr><td>P0072</td><td>车外空气温度传感器输入信号过低</td><td>车外空气温度传感器电路对接地短路</td></tr><tr><td>P0073</td><td>车外空气温度传感器输入信号过高</td><td>车外空气温度传感器电路对蓄电池电压短路</td></tr><tr><td>P0074</td><td>车外空气温度传感器-电路间歇故障</td><td>车外空气温度传感器电路接触不良</td></tr><tr><td>P0075</td><td>气缸列1,进气门控制电磁阀-电路故障</td><td>进气门控制电磁阀故障</td></tr><tr><td>P0076</td><td>气缸列1,进气门控制电磁阀-电路电压过低</td><td>进气门控制电磁阀电路对接地短路</td></tr><tr><td>P0077</td><td>气缸列1,进气门控制电磁阀-电路电压过高</td><td>进气门控制电磁阀对蓄电池电压短路</td></tr><tr><td>P0078</td><td>气缸列1,排气门控制电磁阀-电路故障</td><td>排气门控制电磁阀故障</td></tr><tr><td>P0079</td><td>气缸列1,排气门控制电磁阀-电路电压过低</td><td>排气门控制电磁阀电路对接地短路</td></tr><tr><td>P0080</td><td>气缸列1,排气门控制电磁阀-电路电压过高</td><td>排气门控制电磁阀对蓄电池电压短路</td></tr><tr><td>P0081</td><td>气缸列2,进气门控制电磁阀-电路故障</td><td>进气门控制电磁阀故障</td></tr><tr><td>P0082</td><td>气缸列2,进气门控制电磁阀-电路电压过低</td><td>进气门控制电磁阀电路对接地短路</td></tr><tr><td>P0083</td><td>气缸列2,进气门控制电磁阀-电路电压过高</td><td>进气门控制电磁阀对蓄电池电压短路</td></tr><tr><td>P0084</td><td>气缸列2,排气门控制电磁阀-电路故障</td><td>排气门控制电磁阀故障</td></tr><tr><td>P0085</td><td>气缸列2,排气门控制电磁阀-电路电压过低</td><td>排气门控制电磁阀电路对接地短路</td></tr><tr><td>P0086</td><td>气缸列2,排气门控制电磁阀-电路电压过高</td><td>排气门控制电磁阀对蓄电池电压短路</td></tr><tr><td>P0087</td><td>燃油总管/系统压力过低</td><td>燃油泵;燃油压力调节器故障;燃油供油管堵塞;机械故障</td></tr><tr><td>P0088</td><td>燃油总管/系统压力过高</td><td>燃油泵;燃油压力调节器故障;燃油回油管堵塞;机械故障</td></tr><tr><td>P0089</td><td>燃油压力调节器1-性能故障</td><td>燃油压力调节器故障;机械故障</td></tr><tr><td>P0090</td><td>燃油压力调节器1-电路断路</td><td rowspan=\"3\">燃油压力调节器电路故障</td></tr><tr><td>P0091</td><td>燃油压力调节器1-对接地短路</td></tr><tr><td>P0092</td><td>燃油压力调节器1-对蓄电池电压短路</td></tr><tr><td>P0093</td><td>燃油系统严重泄漏</td><td rowspan=\"2\">燃油压力传感器故障;机械故障</td></tr><tr><td>P0094</td><td>燃油系统少量泄漏</td></tr><tr><td>P0095</td><td>进气温度传感器2-电路故障</td><td rowspan=\"2\">进气温度传感器电路接触不良;进气温度传感器故障;发动机控制模块故障</td></tr><tr><td>P0096</td><td>进气温度传感器2-电路范围/性能故障</td></tr><tr><td>P0097</td><td>进气温度传感器2-电路输入过低</td><td>进气温度传感器电路对接地短路;进气温度传感器故障;发动机控制模块故障</td></tr><tr><td>P0098</td><td>进气温度传感器2-电路输入过高</td><td>进气温度传感器电路对蓄电池电压短路;进气温度传感器故障;发动机控制模块故障</td></tr><tr><td>P0099</td><td>进气温度传感器2-电路间歇故障</td><td>进气温度传感器电路接触不良;进气温度传感器故障;发动机控制模块故障</td></tr><tr><td>P0100</td><td>质量空气流量/体积空气流量传感器-电路故障</td><td>传感器电路故障;传感器故障;发动机控制模块故障</td></tr><tr><td>P0101</td><td>质量空气流量/体积空气流量传感器-范围/性能故障</td><td>传感器故障;发动机进气歧管泄漏或堵塞</td></tr><tr><td>P0102</td><td>质量空气流量/体积空气流量传感器-输入信号过低</td><td>传感器电路对接地短路</td></tr><tr><td>P0103</td><td>质量空气流量/体积空气流量传感器-输入信号过高</td><td>传感器电路对蓄电池电压短路</td></tr><tr><td>P0104</td><td>质量空气流量/体积空气流量传感器-电路间歇故障</td><td>传感器电路接触不良</td></tr><tr><td>P0105</td><td>进气歧管绝对压力传感器/大气压力传感器-电路故障</td><td>传感器电路故障;传感器故障;发动机控制模块故障</td></tr><tr><td>P0106</td><td>进气歧管绝对压力传感器/大气压力传感器-范围/性能故障</td><td>进气/排气泄漏;传感器电路故障;传感器故障</td></tr><tr><td>P0107</td><td>进气歧管绝对压力传感器/大气压力传感器-电路电压过低</td><td>传感器电路对接地短路;传感器故障;发动机控制模块故障</td></tr><tr><td>P0108</td><td>进气歧管绝对压力传感器/大气压力传感器-电路电压过高</td><td>传感器电路对蓄电池电压短路;传感器故障;发动机控制模块故障</td></tr><tr><td>P0109</td><td>进气歧管绝对压力传感器/大气压力传感器-电路间歇故障</td><td>传感器电路接触不良</td></tr><tr><td>P0110</td><td>进气温度传感器-电路故障</td><td rowspan=\"2\">进气温度传感器电路接触不良;进气温度传感器故障;发动机控制模块故障</td></tr><tr><td>P0111</td><td>进气温度传感器-电路范围/性能故障</td></tr><tr><td>P0112</td><td>进气温度传感器-电路输入过低</td><td>进气温度传感器电路对接地短路;进气温度传感器故障;发动机控制模块故障</td></tr><tr><td>P0113</td><td>进气温度传感器-电路输入过高</td><td>进气温度传感器电路对蓄电池电压短路;进气温度传感器故障;发动机控制模块故障</td></tr><tr><td>P0114</td><td>进气温度传感器-电路间歇故障</td><td>进气温度传感器电路接触不良;进气温度传感器故障;发动机控制模块故障</td></tr><tr><td>P0115</td><td>发动机冷却液温度传感器-电路故障</td><td rowspan=\"2\">发动机冷却液温度传感器电路接触不良;发动机冷却液温度传感器故障;发动机控制模块故障</td></tr><tr><td>P0116</td><td>发动机冷却液温度传感器-电路范围/性能故障</td></tr><tr><td>P0117</td><td>发动机冷却液温度传感器-电路输入过低</td><td>发动机冷却液温度传感器电路对接地短路;发动机冷却液温度传感器故障;发动机控制模块故障</td></tr><tr><td>P0118</td><td>发动机冷却液温度传感器-电路输入过高</td><td>发动机冷却液温度传感器电路对蓄电池电压短路;发动机冷却液温度传感器故障;发动机控制模块故障</td></tr><tr><td>P0119</td><td>发动机冷却液温度传感器-电路间歇故障</td><td>发动机冷却液温度传感器电路接触不良;发动机冷却液温度传感器故障;发动机控制模块故障</td></tr><tr><td rowspan=\"2\">P0120</td><td>节气门位置传感器A/加速踏板位置传感器A-电路故障</td><td>传感器电路故障;传感器故障;发动机控制模块故障</td></tr><tr><td>节气门位置开关A/加速踏板位置开关A-电路故障</td><td>开关电路故障;开关故障;发动机控制模块故障</td></tr><tr><td rowspan=\"2\">P0121</td><td>节气门位置传感器A/加速踏板位置传感器A-范围/性能故障</td><td>传感器故障;加速踏板拉线调节不当</td></tr><tr><td>节气门位置开关A/加速踏板位置开关A-范围/性能故障</td><td>开关故障;加速踏板拉线调节不当</td></tr><tr><td rowspan=\"2\">P0122</td><td>节气门位置传感器A/加速踏板位置传感器A-电路电压过低</td><td>传感器电路对接地短路;传感器故障;发动机控制模块故障</td></tr><tr><td>节气门位置开关A/加速踏板位置开关A-电路电压过低</td><td>开关电路对接地短路;开关故障;发动机控制模块故障</td></tr><tr><td rowspan=\"2\">P0123</td><td>节气门位置传感器A/加速踏板位置传感器A-电路电压过高</td><td>传感器电路对蓄电池电压短路;传感器故障;发动机控制模块故障</td></tr><tr><td>节气门位置开关A/加速踏板位置开关A-电路电压过高</td><td>开关电路对蓄电池电压短路;开关故障;发动机控制模块故障</td></tr><tr><td rowspan=\"2\">P0124</td><td>节气门位置传感器A/加速踏板位置传感器A-电路间歇故障</td><td>传感器电路连接不良;传感器故障;发动机控制模块故障</td></tr><tr><td>节气门位置开关A/加速踏板位置开关A-电路间歇故障</td><td>开关电路连接不良;开关故障;发动机控制模块故障</td></tr><tr><td>P0125</td><td>发动机冷却液温度没有达到正常工作温度,无法进入燃油闭环控制状态</td><td rowspan=\"2\">发动机冷却系统故障;发动机冷却液节温器故障;发动机冷却液温度传感器故障</td></tr><tr><td>P0126</td><td>发动机冷却液温度没有达到正常工作温度,无法进入稳定运行状态</td></tr><tr><td>P0127</td><td>发动机进气温度过高</td><td>进气温度传感器2电路对接地短路;进气温度传感器2故障</td></tr><tr><td>P0128</td><td>发动机冷却液节温器-冷却液温度低于节温器作用温度</td><td>机械故障</td></tr><tr><td>P0129</td><td>大气压力过低</td><td>机械故障;大气压力传感器电路故障;大气压力传感器故障</td></tr><tr><td>P0130</td><td>气缸列1,氧传感器1-电路故障</td><td>氧传感器电路接触不良;氧传感器故障</td></tr><tr><td>P0131</td><td>气缸列1,氧传感器1-电路电压过低</td><td>排气泄漏;氧传感器电路对接地短路;氧传感器故障;发动机控制模块故障</td></tr><tr><td>P0132</td><td>气缸列1,氧传感器1-电路电压过高</td><td>氧传感器电路对蓄电池电压短路;氧传感器故障;发动机控制模块故障</td></tr><tr><td>P0133</td><td>气缸列1,氧传感器1-反馈过慢</td><td>氧传感器故障;氧传感器电路故障</td></tr><tr><td>P0134</td><td>气缸列1,氧传感器1-无工作信号</td><td>氧传感器电路断路;氧传感器故障</td></tr><tr><td>P0135</td><td>气缸列1,氧传感器1,加热器控制-电路故障</td><td>熔断器故障;氧传感器电路故障;发动机控制模块故障</td></tr><tr><td>P0136</td><td>气缸列1,氧传感器2-电路故障</td><td>氧传感器电路接触不良;氧传感器故障</td></tr><tr><td>P0137</td><td>气缸列1,氧传感器2-电路电压过低</td><td>排气泄漏;氧传感器电路对接地短路;氧传感器故障;发动机控制模块故障</td></tr><tr><td>P0138</td><td>气缸列1,氧传感器2-电路电压过高</td><td>氧传感器电路对蓄电池电压短路;氧传感器故障;发动机控制模块故障</td></tr><tr><td>P0139</td><td>气缸列1,氧传感器2-反馈过慢</td><td>氧传感器故障;氧传感器电路故障</td></tr><tr><td>P0140</td><td>气缸列1,氧传感器2-无工作信号</td><td>氧传感器电路断路;氧传感器故障</td></tr><tr><td>P0141</td><td>气缸列1,氧传感器2,加热器控制-电路故障</td><td>熔断器故障;氧传感器电路故障;发动机控制模块故障</td></tr><tr><td>P0142</td><td>气缸列1,氧传感器3-电路故障</td><td>氧传感器电路接触不良;氧传感器故障</td></tr><tr><td>P0143</td><td>气缸列1,氧传感器3-电路电压过低</td><td>排气泄漏;氧传感器电路对接地短路;氧传感器故障;发动机控制模块故障</td></tr><tr><td>P0144</td><td>气缸列1,氧传感器3-电路电压过高</td><td>氧传感器电路对蓄电池电压短路;氧传感器故障;发动机控制模块故障</td></tr><tr><td>P0145</td><td>气缸列1,氧传感器3-反馈过慢</td><td>氧传感器故障;氧传感器电路故障</td></tr><tr><td>P0146</td><td>气缸列1,氧传感器3-无工作信号</td><td>氧传感器电路断路;氧传感器故障</td></tr><tr><td>P0147</td><td>气缸列1,氧传感器3,加热器控制-电路故障</td><td>熔断器故障;氧传感器电路故障;发动机控制模块故障</td></tr><tr><td>P0148</td><td>燃油供油故障</td><td rowspan=\"2\">燃油泵/燃油喷射泵故障</td></tr><tr><td>P0149</td><td>燃油喷油时刻故障</td></tr><tr><td>P0150</td><td>气缸列2,氧传感器1-电路故障</td><td>氧传感器电路接触不良;氧传感器故障</td></tr><tr><td>P0151</td><td>气缸列2,氧传感器1-电路电压过低</td><td>排气泄漏;氧传感器电路对接地短路;氧传感器故障;发动机控制模块故障</td></tr><tr><td>P0152</td><td>气缸列2,氧传感器1-电路电压过高</td><td>氧传感器电路对蓄电池电压短路;氧传感器故障;发动机控制模块故障</td></tr><tr><td>P0153</td><td>气缸列2,氧传感器1-反馈过慢</td><td>氧传感器故障;氧传感器电路故障</td></tr><tr><td>P0154</td><td>气缸列2,氧传感器1-无工作信号</td><td>氧传感器电路断路;氧传感器故障</td></tr><tr><td>P0155</td><td>气缸列2,氧传感器1,加热器控制-电路故障</td><td>熔断器故障;氧传感器电路故障;发动机控制模块故障</td></tr><tr><td>P0156</td><td>气缸列2,氧传感器2-电路故障</td><td>氧传感器电路接触不良;氧传感器故障</td></tr><tr><td>P0157</td><td>气缸列2,氧传感器2-电路电压过低</td><td>排气泄漏;氧传感器电路对接地短路;氧传感器故障;发动机控制模块故障</td></tr><tr><td>P0158</td><td>气缸列2,氧传感器2-电路电压过高</td><td>氧传感器电路对蓄电池电压短路;氧传感器故障;发动机控制模块故障</td></tr><tr><td>P0159</td><td>气缸列2,氧传感器2-反馈过慢</td><td>氧传感器故障;氧传感器电路故障</td></tr><tr><td>P0160</td><td>气缸列2,氧传感器2-无工作信号</td><td>氧传感器电路断路;氧传感器故障</td></tr><tr><td>P0161</td><td>气缸列2,氧传感器2,加热器控制-电路故障</td><td>熔断器故障;氧传感器电路故障;发动机控制模块故障</td></tr><tr><td>P0162</td><td>气缸列2,氧传感器3-电路故障</td><td>氧传感器电路接触不良;氧传感器故障</td></tr><tr><td>P0163</td><td>气缸列2,氧传感器3-电路电压过低</td><td>排气泄漏;氧传感器电路对接地短路;氧传感器故障;发动机控制模块故障</td></tr><tr><td>P0164</td><td>气缸列2,氧传感器3-电路电压过高</td><td>氧传感器电路对蓄电池电压短路;氧传感器故障;发动机控制模块故障</td></tr><tr><td>P0165</td><td>气缸列2,氧传感器3-反馈过慢</td><td>氧传感器故障;氧传感器电路故障</td></tr><tr><td>P0166</td><td>气缸列2,氧传感器3-无工作信号</td><td>氧传感器电路断路;氧传感器故障</td></tr><tr><td>P0167</td><td>气缸列2,氧传感器3,加热器控制-电路故障</td><td>熔断器故障;氧传感器电路故障;发动机控制模块故障</td></tr><tr><td>P0168</td><td>燃油温度过高</td><td>燃油温度传感器故障;机械故障;燃油温度传感器电路故障</td></tr><tr><td>P0169</td><td>燃油成分不正确</td><td>机械故障</td></tr><tr><td>P0170</td><td>气缸列1,燃油调整-故障</td><td>进气泄漏;燃油压力/燃油泵故障;喷油器故障</td></tr><tr><td>P0171</td><td>气缸列1,系统混合气过稀</td><td>进气/排气泄漏;进气流量传感器故障;燃油压力/燃油泵故障;喷油器故障;二次空气喷射系统故障;氧传感器故障</td></tr><tr><td>P0172</td><td>气缸列1,系统混合气过浓</td><td>进气堵塞;燃油蒸气排放控制系统炭罐净化阀故障;燃油压力不正确;废气再循环系统故障</td></tr><tr><td>P0173</td><td>气缸列2,燃油调整-故障</td><td>进气泄漏;燃油压力/燃油泵故障;喷油器故障</td></tr><tr><td>P0174</td><td>气缸列2,系统混合气过稀</td><td>进气/排气泄漏;进气流量传感器故障;燃油压力/燃油泵故障;喷油器故障;二次空气喷射系统故障;氧传感器故障</td></tr><tr><td>P0175</td><td>气缸列2,系统混合气过浓</td><td>进气堵塞;燃油蒸气排放控制系统炭罐净化阀故障;燃油压力不正确;废气再循环系统故障</td></tr><tr><td>P0176</td><td>燃油成分传感器-电路故障</td><td>传感器电路故障;传感器故障;发动机控制模块故障</td></tr><tr><td>P0177</td><td>燃油成分传感器-范围/性能故障</td><td>传感器故障</td></tr><tr><td>P0178</td><td>燃油成分传感器-电路电压过低</td><td>传感器电路对接地短路;传感器故障;发动机控制模块故障</td></tr><tr><td>P0179</td><td>燃油成分传感器-电路电压过高</td><td>传感器电路对蓄电池电压短路;传感器故障;发动机控制模块故障</td></tr><tr><td>P0180</td><td>燃油温度传感器A-电路故障</td><td>传感器电路故障;传感器故障;发动机控制模块故障</td></tr><tr><td>P0181</td><td>燃油温度传感器A-范围/性能故障</td><td>传感器故障</td></tr><tr><td>P0182</td><td>燃油温度传感器A-电路电压过低</td><td>传感器电路对接地短路;传感器故障;发动机控制模块故障</td></tr><tr><td>P0183</td><td>燃油温度传感器A-电路电压过高</td><td>传感器电路对蓄电池电压短路;传感器故障;发动机控制模块故障</td></tr><tr><td>P0184</td><td>燃油温度传感器A-电路间歇故障</td><td>传感器电路接触不良;传感器故障;发动机控制模块故障</td></tr><tr><td>P0185</td><td>燃油温度传感器B-电路故障</td><td>传感器电路故障;传感器故障;发动机控制模块故障</td></tr><tr><td>P0186</td><td>燃油温度传感器B-范围/性能故障</td><td>传感器故障</td></tr><tr><td>P0187</td><td>燃油温度传感器B-电路电压过低</td><td>传感器电路对接地短路;传感器故障;发动机控制模块故障</td></tr><tr><td>P0188</td><td>燃油温度传感器B-电路电压过高</td><td>传感器电路对蓄电池电压短路;传感器故障;发动机控制模块故障</td></tr><tr><td>P0189</td><td>燃油温度传感器B-电路间歇故障</td><td>传感器电路接触不良;传感器故障;发动机控制模块故障</td></tr><tr><td>P0190</td><td>燃油总管压力传感器-电路故障</td><td>传感器电路故障;传感器故障;发动机控制模块故障</td></tr><tr><td>P0191</td><td>燃油总管压力传感器-范围/性能故障</td><td>传感器故障;传感器电路故障</td></tr><tr><td>P0192</td><td>燃油总管压力传感器-电路电压过低</td><td>传感器电路对接地短路;传感器故障;发动机控制模块故障</td></tr><tr><td>P0193</td><td>燃油总管压力传感器-电路电压过高</td><td>传感器电路对蓄电池电压短路;传感器故障;发动机控制模块故障</td></tr><tr><td>P0194</td><td>燃油总管压力传感器-电路间歇故障</td><td>传感器电路接触不良;传感器故障;发动机控制模块故障</td></tr><tr><td>P0195</td><td>发动机机油温度传感器-电路故障</td><td>传感器电路故障;传感器故障;发动机控制模块故障</td></tr><tr><td>P0196</td><td>发动机机油温度传感器-范围/性能故障</td><td>传感器故障</td></tr><tr><td>P0197</td><td>发动机机油温度传感器-电路电压过低</td><td>传感器电路对接地短路;传感器故障;发动机控制模块故障</td></tr><tr><td>P0198</td><td>发动机机油温度传感器-电路电压过高</td><td>传感器电路对蓄电池电压短路;传感器故障;发动机控制模块故障</td></tr><tr><td>P0199</td><td>发动机机油温度传感器-电路间歇故障</td><td>传感器电路接触不良;传感器故障;发动机控制模块故障</td></tr><tr><td>P0200</td><td>喷油器-电路故障</td><td>喷油器电路故障;喷油器故障;发动机控制模块故障</td></tr><tr><td>P0201</td><td>喷油器1-电路故障</td><td rowspan=\"12\">喷油器电路故障;喷油器故障;发动机控制模块故障</td></tr><tr><td>P0202</td><td>喷油器2-电路故障</td></tr><tr><td>P0203</td><td>喷油器3-电路故障</td></tr><tr><td>P0204</td><td>喷油器4-电路故障</td></tr><tr><td>P0205</td><td>喷油器5-电路故障</td></tr><tr><td>P0206</td><td>喷油器6-电路故障</td></tr><tr><td>P0207</td><td>喷油器7-电路故障</td></tr><tr><td>P0208</td><td>喷油器8-电路故障</td></tr><tr><td>P0209</td><td>喷油器9-电路故障</td></tr><tr><td>P0210</td><td>喷油器10-电路故障</td></tr><tr><td>P0211</td><td>喷油器-11电路故障</td></tr><tr><td>P0212</td><td>喷油器-12电路故障</td></tr><tr><td>P0213</td><td>冷启动喷油器1-电路故障</td><td rowspan=\"2\">冷启动喷油器电路故障;冷启动喷油器故障;发动机控制模块故障</td></tr><tr><td>P0214</td><td>冷启动喷油器2-电路故障</td></tr><tr><td>P0215</td><td>燃油切断电磁阀-电路故障</td><td>电磁阀电路故障;电磁阀故障;发动机控制模块故障</td></tr><tr><td>P0216</td><td>燃油喷射正时控制-电路故障</td><td>燃油喷射正时控制电磁阀电路故障;燃油喷射正时控制电磁阀故障;发动机控制模块故障</td></tr><tr><td>P0217</td><td>发动机工作温度过高</td><td>发动机冷却系统故障;冷却液节温器故障;发动机冷却液温度传感器故障</td></tr><tr><td>P0218</td><td>变速器温度过高</td><td>变速器油液温度传感器故障;发动机控制模块故障</td></tr><tr><td>P0219</td><td>发动机转速过高</td><td>换挡不正确</td></tr><tr><td rowspan=\"2\">P0220</td><td>节气门位置传感器B/加速踏板位置传感器B-电路故障</td><td>传感器电路故障;传感器故障;发动机控制模块故障</td></tr><tr><td>节气门位置开关B/加速踏板位置开关B-电路故障</td><td>开关电路故障;开关故障;发动机控制模块故障</td></tr><tr><td rowspan=\"2\">P0221</td><td>节气门位置传感器B/加速踏板位置传感器B-范围/性能故障</td><td>传感器故障;加速踏板拉索调节故障</td></tr><tr><td>节气门位置开关B/加速踏板位置开关B-范围/性能故障</td><td>开关故障;加速踏板拉索调节故障</td></tr><tr><td rowspan=\"2\">P0222</td><td>节气门位置传感器B/加速踏板位置传感器B-电路电压过低</td><td>传感器电路对接地短路;传感器故障;发动机控制模块故障</td></tr><tr><td>节气门位置开关B/加速踏板位置开关B-电路电压过低</td><td>开关电路对接地短路;开关故障;发动机控制模块故障</td></tr><tr><td rowspan=\"2\">P0223</td><td>节气门位置传感器B/加速踏板位置传感器B-电路电压过高</td><td>传感器电路对蓄电池电压短路;传感器故障;发动机控制模块故障</td></tr><tr><td>节气门位置开关B/加速踏板位置开关B-电路电压过高</td><td>开关电路对蓄电池电压短路;开关故障;发动机控制模块故障</td></tr><tr><td rowspan=\"2\">P0224</td><td>节气门位置传感器B/加速踏板位置传感器B-电路间歇故障</td><td>传感器电路接触不良;传感器故障;发动机控制模块故障</td></tr><tr><td>节气门位置开关B/加速踏板位置开关B-电路间歇故障</td><td>开关电路接触不良;开关故障;发动机控制模块故障</td></tr><tr><td rowspan=\"2\">P0225</td><td>节气门位置传感器C/加速踏板位置传感器C-电路故障</td><td>传感器电路故障;传感器故障;发动机控制模块故障</td></tr><tr><td>节气门位置开关C/加速踏板位置开关C-电路故障</td><td>开关电路故障;开关故障;发动机控制模块故障</td></tr><tr><td rowspan=\"2\">P0226</td><td>节气门位置传感器C/加速踏板位置传感器C-范围/性能故障</td><td>传感器故障;加速踏板拉索调节故障</td></tr><tr><td>节气门位置开关C/加速踏板位置开关C-范围/性能故障</td><td>开关故障;加速踏板拉索调节故障</td></tr><tr><td rowspan=\"2\">P0227</td><td>节气门位置传感器C/加速踏板位置传感器C-电路电压过低</td><td>传感器电路对接地短路;传感器故障;发动机控制模块故障</td></tr><tr><td>节气门位置开关C/加速踏板位置开关C-电路电压过低</td><td>开关电路对接地短路;开关故障;发动机控制模块故障</td></tr><tr><td rowspan=\"2\">P0228</td><td>节气门位置传感器C/加速踏板位置传感器C-电路电压过高</td><td>传感器电路对蓄电池电压短路;传感器故障;发动机控制模块故障</td></tr><tr><td>节气门位置开关C/加速踏板位置开关C-电路电压过高</td><td>开关电路对蓄电池电压短路;开关故障;发动机控制模块故障</td></tr><tr><td rowspan=\"2\">P0229</td><td>节气门位置传感器C/加速踏板位置传感器C-电路间歇故障</td><td>传感器电路接触不良;传感器故障;发动机控制模块故障</td></tr><tr><td>节气门位置开关C/加速踏板位置开关C-电路间歇故障</td><td>开关电路接触不良;开关故障;发动机控制模块故障</td></tr><tr><td>P0230</td><td>燃油泵继电器-电路故障</td><td>燃油泵继电器电路故障;燃油泵继电器故障;发动机控制模块故障</td></tr><tr><td>P0231</td><td>燃油泵继电器-电路电压过低</td><td>燃油泵继电器电路对接地短路;燃油泵继电器故障;发动机控制模块故障</td></tr><tr><td>P0232</td><td>燃油泵继电器-电路电压过高</td><td>燃油泵继电器电路对蓄电池电压短路;燃油泵继电器故障;发动机控制模块故障</td></tr><tr><td>P0233</td><td>燃油泵继电器-电路间歇故障</td><td>燃油泵继电器电路接触不良;燃油泵继电器故障;发动机控制模块故障</td></tr><tr><td rowspan=\"2\">P0234</td><td>涡轮增压,发动机增压状态-超过限定值</td><td>增压管路连接故障;涡轮增压调节阀故障</td></tr><tr><td>发动机增压器,发动机增压状态-超过限定值</td><td>增压器故障;增压器旁通阀故障</td></tr><tr><td rowspan=\"2\">P0235</td><td>进气歧管绝对压力传感器A,涡轮增压系统-电路故障</td><td>传感器故障;传感器电路故障</td></tr><tr><td>涡轮增压压力传感器A/增压压力传感器A-电路故障</td><td>传感器故障;传感器电路故障</td></tr><tr><td rowspan=\"2\">P0236</td><td>进气歧管绝对压力传感器A,涡轮增压系统范围/性能故障</td><td>进气/排气歧管泄漏;传感器故障;发动机控制模块故障</td></tr><tr><td>涡轮增压压力传感器A/增压压力传感器A-范围/性能故障</td><td>进气/排气歧管泄漏;增压管路连接故障;传感器故障</td></tr><tr><td rowspan=\"2\">P0237</td><td>进气歧管绝对压力传感器A,涡轮增压系统-输入信号过低</td><td>传感器电路对接地短路;传感器故障;发动机控制模块故障</td></tr><tr><td>涡轮增压压力传感器A/增压压力传感器A-输入信号过低</td><td>增压压力传感器电路对接地短路;传感器故障;发动机控制模块故障</td></tr><tr><td rowspan=\"2\">P0238</td><td>进气歧管绝对压力传感器A,涡轮增压系统-输入信号过高</td><td>传感器电路对蓄电池电压短路;传感器故障;发动机控制模块故障</td></tr><tr><td>涡轮增压压力传感器A/增压压力传感器A-输入信号过高</td><td>增压压力传感器电路对蓄电池电压短路;传感器故障;发动机控制模块故障</td></tr><tr><td rowspan=\"2\">P0239</td><td>进气歧管绝对压力传感器B,涡轮增压系统-电路故障</td><td>传感器故障;传感器电路故障</td></tr><tr><td>涡轮增压压力传感器B/增压压力传感器B-电路故障</td><td>传感器故障;传感器电路故障</td></tr><tr><td rowspan=\"2\">P0240</td><td>进气歧管绝对压力传感器B,涡轮增压系统范围/性能故障</td><td>进气/排气歧管泄漏;传感器故障;发动机控制模块故障</td></tr><tr><td>涡轮增压压力传感器B/增压压力传感器B-范围/性能故障</td><td>进气/排气歧管泄漏;增压管路连接故障;传感器故障</td></tr><tr><td rowspan=\"2\">P0241</td><td>进气歧管绝对压力传感器B,涡轮增压系统-输入信号过低</td><td>传感器电路对接地短路;传感器故障;发动机控制模块故障</td></tr><tr><td>涡轮增压压力传感器B/增压压力传感器B-输入信号过低</td><td>增压压力传感器电路对接地短路;传感器故障;发动机控制模块故障</td></tr><tr><td rowspan=\"2\">P0242</td><td>进气歧管绝对压力传感器B,涡轮增压系统-输入信号过高</td><td>传感器电路对蓄电池电压短路;传感器故障;发动机控制模块故障</td></tr><tr><td>涡轮增压压力传感器B/增压压力传感器B-输入信号过高</td><td>增压压力传感器电路对蓄电池电压短路;传感器故障;发动机控制模块故障</td></tr><tr><td rowspan=\"2\">P0243</td><td>发动机增压旁通阀A-电路故障</td><td>增压旁通阀电路故障;增压旁通阀故障;发动机控制模块故障</td></tr><tr><td>涡轮增压废气调节阀A-电路故障</td><td>调节阀电路故障;调节阀故障;发动机控制模块故障</td></tr><tr><td rowspan=\"2\">P0244</td><td>发动机增压旁通阀A-范围/性能故障</td><td>增压旁通阀故障</td></tr><tr><td>涡轮增压废气调节阀A-范围/性能故障</td><td>调节阀故障</td></tr><tr><td rowspan=\"2\">P0245</td><td>发动机增压旁通阀A-电路电压过低</td><td>增压旁通阀电路对接地短路;增压旁通阀故障;发动机控制模块故障</td></tr><tr><td>涡轮增压废气调节阀A-电路电压过低</td><td>调节阀电路对接地短路;调节阀故障;发动机控制模块故障</td></tr><tr><td rowspan=\"2\">P0246</td><td>发动机增压旁通阀A-电路电压过高</td><td>增压旁通阀电路对蓄电池电压短路;增压旁通阀故障;发动机控制模块故障</td></tr><tr><td>涡轮增压废气调节阀A-电路电压过高</td><td>调节阀电路对蓄电池电压短路;调节阀故障;发动机控制模块故障</td></tr><tr><td rowspan=\"2\">P0247</td><td>发动机增压旁通阀B-电路故障</td><td>增压旁通阀电路故障;增压旁通阀故障;发动机控制模块故障</td></tr><tr><td>涡轮增压废气调节阀B-电路故障</td><td>调节阀电路故障;调节阀故障;发动机控制模块故障</td></tr><tr><td rowspan=\"2\">P0248</td><td>发动机增压旁通阀B-范围/性能故障</td><td>增压旁通阀故障</td></tr><tr><td>涡轮增压废气调节阀B-范围/性能故障</td><td>调节阀故障</td></tr><tr><td rowspan=\"2\">P0249</td><td>发动机增压旁通阀B-电路电压过低</td><td>增压旁通阀电路对接地短路;增压旁通阀故障;发动机控制模块故障</td></tr><tr><td>涡轮增压废气调节阀B-电路电压过低</td><td>调节阀电路对接地短路;调节阀故障;发动机控制模块故障</td></tr><tr><td rowspan=\"2\">P0250</td><td>发动机增压旁通阀B-电路电压过高</td><td>增压旁通阀电路对蓄电池电压短路;增压旁通阀故障;发动机控制模块故障</td></tr><tr><td>涡轮增压废气调节阀B-电路电压过高</td><td>调节阀电路对蓄电池电压短路;调节阀故障;发动机控制模块故障</td></tr><tr><td>P0251</td><td>燃油喷射泵油量计量控制A-凸轮/转子/喷油器电路故障</td><td>电路故障;喷射泵故障;发动机控制模块故障</td></tr><tr><td>P0252</td><td>燃油喷射泵油量计量控制A-凸轮/转子/喷油器范围/性能故障</td><td>喷射泵故障</td></tr><tr><td>P0253</td><td>燃油喷射泵油量计量控制A-凸轮/转子/喷油器电路电压过低</td><td>电路对接地短路;喷射泵故障;发动机控制模块故障</td></tr><tr><td>P0254</td><td>燃油喷射泵油量计量控制A-凸轮/转子/喷油器电路电压过高</td><td>电路对蓄电池电压短路;喷射泵故障;发动机控制模块故障</td></tr><tr><td>P0255</td><td>燃油喷射泵油量计量控制A-凸轮/转子/喷油器电路间歇故障</td><td>电路连接不良;喷射泵故障;发动机控制模块故障</td></tr><tr><td>P0256</td><td>燃油喷射泵油量计量控制B-凸轮/转子/喷油器电路故障</td><td>电路故障;喷射泵故障;发动机控制模块故障</td></tr><tr><td>P0257</td><td>燃油喷射泵油量计量控制B-凸轮/转子/喷油器范围/性能故障</td><td>喷射泵故障</td></tr><tr><td>P0258</td><td>燃油喷射泵油量计量控制B-凸轮/转子/喷油器电路电压过低</td><td>电路对接地短路;喷射泵故障;发动机控制模块故障</td></tr><tr><td>P0259</td><td>燃油喷射泵油量计量控制B-凸轮/转子/喷油器电路电压过高</td><td>电路对蓄电池电压短路;喷射泵故障;发动机控制模块故障</td></tr><tr><td>P0260</td><td>燃油喷射泵油量计量控制B-凸轮/转子/喷油器电路间歇故障</td><td>电路连接不良;喷射泵故障;发动机控制模块故障</td></tr><tr><td>P0261</td><td>喷油器1-电路电压过低</td><td>喷油器电路对接地短路;喷油器故障;发动机控制模块故障</td></tr><tr><td>P0262</td><td>喷油器1-电路电压过高</td><td>喷油器电路对蓄电池电压短路;喷油器故障;发动机控制模块故障</td></tr><tr><td>P0263</td><td>气缸1工作不正常</td><td>燃油系统故障;发动机控制模块故障</td></tr><tr><td>P0264</td><td>喷油器2-电路电压过低</td><td>喷油器电路对接地短路;喷油器故障;发动机控制模块故障</td></tr><tr><td>P0265</td><td>喷油器2-电路电压过高</td><td>喷油器电路对蓄电池电压短路;喷油器故障;发动机控制模块故障</td></tr><tr><td>P0266</td><td>气缸2工作不正常</td><td>燃油系统故障;发动机控制模块故障</td></tr><tr><td>P0267</td><td>喷油器3-电路电压过低</td><td>喷油器电路对接地短路;喷油器故障;发动机控制模块故障</td></tr><tr><td>P0268</td><td>喷油器3-电路电压过高</td><td>喷油器电路对蓄电池电压短路;喷油器故障;发动机控制模块故障</td></tr><tr><td>P0269</td><td>气缸3工作不正常</td><td>燃油系统故障;发动机控制模块故障</td></tr><tr><td>P0270</td><td>喷油器4-电路电压过低</td><td>喷油器电路对接地短路;喷油器故障;发动机控制模块故障</td></tr><tr><td>P0271</td><td>喷油器4-电路电压过高</td><td>喷油器电路对蓄电池电压短路;喷油器故障;发动机控制模块故障</td></tr><tr><td>P0272</td><td>气缸4工作不正常</td><td>燃油系统故障;发动机控制模块故障</td></tr><tr><td>P0273</td><td>喷油器5-电路电压过低</td><td>喷油器电路对接地短路;喷油器故障;发动机控制模块故障</td></tr><tr><td>P0274</td><td>喷油器5-电路电压过高</td><td>喷油器电路对蓄电池电压短路;喷油器故障;发动机控制模块故障</td></tr><tr><td>P0275</td><td>气缸5工作不正常</td><td>燃油系统故障;发动机控制模块故障</td></tr><tr><td>P0276</td><td>喷油器6-电路电压过低</td><td>喷油器电路对接地短路;喷油器故障;发动机控制模块故障</td></tr><tr><td>P0277</td><td>喷油器6-电路电压过高</td><td>喷油器电路对蓄电池电压短路;喷油器故障;发动机控制模块故障</td></tr><tr><td>P0278</td><td>气缸6工作不正常</td><td>燃油系统故障;发动机控制模块故障</td></tr><tr><td>P0279</td><td>喷油器7-电路电压过低</td><td>喷油器电路对接地短路;喷油器故障;发动机控制模块故障</td></tr><tr><td>P0280</td><td>喷油器7-电路电压过高</td><td>喷油器电路对蓄电池电压短路;喷油器故障;发动机控制模块故障</td></tr><tr><td>P0281</td><td>气缸7工作不正常</td><td>燃油系统故障;发动机控制模块故障</td></tr><tr><td>P0282</td><td>喷油器8-电路电压过低</td><td>喷油器电路对接地短路;喷油器故障;发动机控制模块故障</td></tr><tr><td>P0283</td><td>喷油器8-电路电压过高</td><td>喷油器电路对蓄电池电压短路;喷油器故障;发动机控制模块故障</td></tr><tr><td>P0284</td><td>气缸8工作不正常</td><td>燃油系统故障;发动机控制模块故障</td></tr><tr><td>P0285</td><td>喷油器9-电路电压过低</td><td>喷油器电路对接地短路;喷油器故障;发动机控制模块故障</td></tr><tr><td>P0286</td><td>喷油器9-电路电压过高</td><td>喷油器电路对蓄电池电压短路;喷油器故障;发动机控制模块故障</td></tr><tr><td>P0287</td><td>气缸9工作不正常</td><td>燃油系统故障;发动机控制模块故障</td></tr><tr><td>P0288</td><td>喷油器10-电路电压过低</td><td>喷油器电路对接地短路;喷油器故障;发动机控制模块故障</td></tr><tr><td>P0289</td><td>喷油器10-电路电压过高</td><td>喷油器电路对蓄电池电压短路;喷油器故障;发动机控制模块故障</td></tr><tr><td>P0290</td><td>气缸10工作不正常</td><td>燃油系统故障;发动机控制模块故障</td></tr><tr><td>P0291</td><td>喷油器11-电路电压过低</td><td>喷油器电路对接地短路;喷油器故障;发动机控制模块故障</td></tr><tr><td>P0292</td><td>喷油器11-电路电压过高</td><td>喷油器电路对蓄电池电压短路;喷油器故障;发动机控制模块故障</td></tr><tr><td>P0293</td><td>气缸11工作不正常</td><td>燃油系统故障;发动机控制模块故障</td></tr><tr><td>P0294.</td><td>喷油器12-电路电压过低</td><td>喷油器电路对接地短路;喷油器故障;发动机控制模块故障</td></tr><tr><td>P0295</td><td>喷油器12-电路电压过高</td><td>喷油器电路对蓄电池电压短路;喷油器故障;发动机控制模块故障</td></tr><tr><td>P0296</td><td>气缸12工作不正常</td><td>燃油系统故障;发动机控制模块故障</td></tr><tr><td>P0297</td><td>车速过高</td><td>车速传感器故障;车速传感器电路故障;机械故障</td></tr><tr><td>P0298</td><td>发动机机油温度过高</td><td>发动机机油温度传感器电路故障;机油温度传感器故障;机械故障</td></tr><tr><td>P0299</td><td>发动机增压压力过低</td><td>机械故障</td></tr><tr><td>P0300</td><td>多个气缸偶发性断火</td><td>火花塞故障;喷油器故障;点火线圈故障;气缸压力过低</td></tr><tr><td>P0301</td><td>气缸1断火</td><td rowspan=\"12\">发动机机械故障;点火/燃油系统故障;喷油器故障;发动机冷却液/进气流量传感器故障;发动机控制模块故障</td></tr><tr><td>P0302</td><td>气缸2断火</td></tr><tr><td>P0303</td><td>气缸3断火</td></tr><tr><td>P0304</td><td>气缸4断火</td></tr><tr><td>P0305</td><td>气缸5断火</td></tr><tr><td>P0306</td><td>气缸6断火</td></tr><tr><td>P0307</td><td>气缸7断火</td></tr><tr><td>P0308</td><td>气缸8断火</td></tr><tr><td>P0309</td><td>气缸9断火</td></tr><tr><td>P0310</td><td>气缸10断火</td></tr><tr><td>P0311</td><td>气缸11断火</td></tr><tr><td>P0312</td><td>气缸12断火</td></tr><tr><td>P0313</td><td>发动机断火-燃油油位过低</td><td>燃油系统;机械故障</td></tr><tr><td>P0314</td><td>单个气缸断火</td><td>发动机机械故障;点火/燃油系统故障;喷油器故障</td></tr><tr><td>P0315</td><td>未能检测到曲轴位置传感器齿形变化</td><td>发动机机械故障;电路故障</td></tr><tr><td>P0316</td><td>在发动机启动后第一个1000转工作周期内检测到断火</td><td>发动机机械故障;点火/燃油系统故障;喷油器故障</td></tr><tr><td>P0317</td><td>发动机控制电脑未接收到ABS控制模块发出的路面不平信号</td><td>电路故障;发动机控制模块故障</td></tr><tr><td>P0318</td><td>路面不平传感器A-电路故障</td><td rowspan=\"2\">传感器电路故障;传感器故障;机械故障</td></tr><tr><td>P0319</td><td>路面不平传感器B-电路故障</td></tr><tr><td>P0320</td><td>曲轴位置传感器/发动机转速传感器-电路故障</td><td>传感器电路故障;传感器故障;发动机控制模块故障</td></tr><tr><td>P0321</td><td>曲轴位置传感器/发动机转速传感器-范围/性能故障</td><td>传感器齿轮空气间隙不正确;传感器有金属粉末污染;传感器/转子安装不牢固;传感器电路故障;传感器故障</td></tr><tr><td>P0322</td><td>曲轴位置传感器/发动机转速传感器-无信号</td><td rowspan=\"2\">传感器电路故障;传感器故障;发动机控制模块故障</td></tr><tr><td>P0323</td><td>曲轴位置传感器/发动机转速传感器-电路间歇故障</td></tr><tr><td>P0324</td><td>爆震控制系统故障</td><td>爆震传感器电路连接不良;发动机控制模块故障</td></tr><tr><td>P0325</td><td>气缸列1,爆震传感器1-电路故障</td><td>传感器电路连接不良;传感器故障;发动机控制模块故障</td></tr><tr><td>P0326</td><td>气缸列1,爆震传感器1-范围/性能故障</td><td>传感器电路故障;传感器拧紧力矩不正确;传感器故障</td></tr><tr><td>P0327</td><td>气缸列1,爆震传感器1-电路电压过低</td><td>传感器电路对接地短路;传感器拧紧力矩不正确;发动机控制模块故障</td></tr><tr><td>P0328</td><td>气缸列1,爆震传感器1-电路电压过高</td><td>传感器电路对蓄电池电压短路;传感器拧紧力矩不正确;发动机控制模块故障</td></tr><tr><td>P0329</td><td>气缸列1,爆震传感器1-电路间歇故障</td><td>传感器电路连接不良;传感器故障;发动机控制模块故障</td></tr><tr><td>P0330</td><td>气缸列2,爆震传感器2-电路故障</td><td>传感器电路连接不良;传感器故障;发动机控制模块故障</td></tr><tr><td>P0331</td><td>气缸列2,爆震传感器2-范围/性能故障</td><td>传感器电路故障;传感器拧紧力矩不正确;传感器故障</td></tr><tr><td>P0332</td><td>气缸列2,爆震传感器2-电路电压过低</td><td>传感器电路对接地短路;传感器拧紧力矩不正确;发动机控制模块故障</td></tr><tr><td>P0333</td><td>气缸列2,爆震传感器2-电路电压过高</td><td>传感器电路对蓄电池电压短路;传感器拧紧力矩不正确;发动机控制模块故障</td></tr><tr><td>P0334</td><td>气缸列2,爆震传感器2-电路间歇故障</td><td>传感器电路连接不良;传感器故障;发动机控制模块故障</td></tr><tr><td>P0335</td><td>曲轴位置传感器-电路故障</td><td>传感器电路故障;传感器故障;发动机控制模块故障</td></tr><tr><td>P0336</td><td>曲轴位置传感器-范围/性能故障</td><td>传感器电路故障;传感器故障</td></tr><tr><td>P0337</td><td>曲轴位置传感器-电路电压过低</td><td>传感器电路对接地短路;传感器故障;发动机控制模块故障</td></tr><tr><td>P0338</td><td>曲轴位置传感器-电路电压过高</td><td>传感器电路对蓄电池电压短路;传感器故障;发动机控制模块故障</td></tr><tr><td>P0339</td><td>曲轴位置传感器-电路间歇故障</td><td>传感器电路接触不良;传感器故障;发动机控制模块故障</td></tr><tr><td>P0340</td><td>气缸列1,凸轮轴位置传感器A-电路故障</td><td>传感器电路故障;传感器故障;发动机控制模块故障</td></tr><tr><td>P0341</td><td>气缸列1,凸轮轴位置传感器A-范围/性能故障</td><td>传感器电路故障;传感器故障</td></tr><tr><td>P0342</td><td>气缸列1,凸轮轴位置传感器A-电路电压过低</td><td>传感器电路对接地短路;传感器故障;发动机控制模块故障</td></tr><tr><td>P0343</td><td>气缸列1,凸轮轴位置传感器A-电路电压过高</td><td>传感器电路对蓄电池电压短路;传感器故障;发动机控制模块故障</td></tr><tr><td>P0344</td><td>气缸列1,凸轮轴位置传感器A-电路间歇故障</td><td>传感器电路接触不良;传感器故障;发动机控制模块故障</td></tr><tr><td>P0345</td><td>气缸列2,凸轮轴位置传感器A-电路故障</td><td>传感器电路故障;传感器故障;发动机控制模块故障</td></tr><tr><td>P0346</td><td>气缸列2,凸轮轴位置传感器A-范围/性能故障</td><td>传感器电路故障;传感器故障</td></tr><tr><td>P0347</td><td>气缸列2,凸轮轴位置传感器A-电路电压过低</td><td>传感器电路对接地短路;传感器故障;发动机控制模块故障</td></tr><tr><td>P0348</td><td>气缸列2,凸轮轴位置传感器A-电路电压过高</td><td>传感器电路对蓄电池电压短路;传感器故障;发动机控制模块故障</td></tr><tr><td>P0349</td><td>气缸列2,凸轮轴位置传感器A-电路间歇故障</td><td>传感器电路接触不良;传感器故障;发动机控制模块故障</td></tr><tr><td>P0350</td><td>点火线圈,初级/次级-电路故障</td><td>点火线圈电路故障;点火线圈故障;发动机控制模块故障</td></tr><tr><td>P0351</td><td>点火线圈A,初级/次级-电路故障</td><td rowspan=\"12\">点火线圈电路故障;点火线圈故障;发动机控制模块故障</td></tr><tr><td>P0352</td><td>点火线圈B,初级/次级-电路故障</td></tr><tr><td>P0353</td><td>点火线圈C,初级/次级-电路故障</td></tr><tr><td>P0354</td><td>点火线圈D,初级/次级-电路故障</td></tr><tr><td>P0355</td><td>点火线圈E,初级/次级-电路故障</td></tr><tr><td>P0356</td><td>点火线圈F,初级/次级-电路故障</td></tr><tr><td>P0357</td><td>点火线圈G,初级/次级-电路故障</td></tr><tr><td>P0358</td><td>点火线圈H,初级/次级-电路故障</td></tr><tr><td>P0359</td><td>点火线圈I,初级/次级-电路故障</td></tr><tr><td>P0360</td><td>点火线圈J,初级/次级-电路故障</td></tr><tr><td>P0361</td><td>点火线圈K,初级/次级-电路故障</td></tr><tr><td>P0362</td><td>点火线圈L,初级/次级-电路故障</td></tr><tr><td>P0363</td><td>供油故障导致发动机断火</td><td>燃油系统故障;机械故障</td></tr><tr><td>P0365</td><td>气缸列1,凸轮轴位置传感器B-电路故障</td><td>传感器电路故障;传感器故障;发动机控制模块故障</td></tr><tr><td>P0366</td><td>气缸列1,凸轮轴位置传感器B-范围/性能故障</td><td>传感器电路故障;传感器故障</td></tr><tr><td>P0367</td><td>气缸列1,凸轮轴位置传感器B-电路电压过低</td><td>传感器电路对接地短路;传感器故障;发动机控制模块故障</td></tr><tr><td>P0368</td><td>气缸列1,凸轮轴位置传感器B-电路电压过高</td><td>传感器电路对蓄电池电压短路;传感器故障;发动机控制模块故障</td></tr><tr><td>P0369</td><td>气缸列1,凸轮轴位置传感器B-电路间歇故障</td><td>传感器电路接触不良;传感器故障;发动机控制模块故障</td></tr><tr><td>P0370</td><td>正时参考,高清晰信号A-故障</td><td rowspan=\"3\">曲轴位置传感器/发动机转速传感器/凸轮轴位置传感器故障;发动机控制模块故障</td></tr><tr><td>P0371</td><td>正时参考,高清晰信号A-脉冲信号过多</td></tr><tr><td>P0372</td><td>正时参考,高清晰信号A-脉冲信号过少</td></tr><tr><td>P0373</td><td>正时参考,高清晰信号A-间歇故障/脉冲信号错误</td><td>曲轴位置传感器/发动机转速传感器/凸轮轴位置传感器故障;曲轴位置传感器/发动机转速传感器/凸轮轴位置传感器电路接触不良;发动机控制模块故障</td></tr><tr><td>P0374</td><td>正时参考,高清晰信号A-无脉冲信号</td><td>曲轴位置传感器/发动机转速传感器/凸轮轴位置传感器故障;曲轴位置传感器/发动机转速传感器/凸轮轴位置传感器电路故障;发动机控制模块故障</td></tr><tr><td>P0375</td><td>正时参考,高清晰信号B-故障</td><td rowspan=\"3\">曲轴位置传感器/发动机转速传感器/凸轮轴位置传感器故障;发动机控制模块故障</td></tr><tr><td>P0376</td><td>正时参考,高清晰信号B-脉冲信号过多</td></tr><tr><td>P0377</td><td>正时参考,高清晰信号B-脉冲信号过少</td></tr><tr><td>P0378</td><td>正时参考,高清晰信号B-间歇故障/脉冲信号错误</td><td>曲轴位置传感器/发动机转速传感器/凸轮轴位置传感器故障;曲轴位置传感器/发动机转速传感器/凸轮轴位置传感器电路接触不良;发动机控制模块故障</td></tr><tr><td>P0379</td><td>正时参考,高清晰信号B-无脉冲信号</td><td>曲轴位置传感器/发动机转速传感器/凸轮轴位置传感器故障;曲轴位置传感器/发动机转速传感器/凸轮轴位置传感器电路故障;发动机控制模块故障</td></tr><tr><td>P0380</td><td>预热塞,电路A-故障</td><td>预热塞电路故障;预热塞故障;预热塞继电器故障;预热塞熔断器故障;发动机控制模块故障</td></tr><tr><td>P0381</td><td>预热塞报警灯-电路故障</td><td>预热塞报警灯电路故障;预热塞报警灯故障;发动机控制模块故障</td></tr><tr><td>P0382</td><td>预热塞,电路B-故障</td><td>预热塞电路故障;预热塞故障;预热塞继电器故障;预热塞熔断器故障;发动机控制模块故障</td></tr><tr><td>P0383</td><td>预热塞控制模块-电路电压过低</td><td>预热塞控制模块电路对接地短路;预热塞控制模块故障</td></tr><tr><td>P0384</td><td>预热塞控制模块-电路电压过高</td><td>预热塞控制模块电路对蓄电池电压短路;预热塞控制模块故障</td></tr><tr><td>P0385</td><td>曲轴位置传感器B-电路故障</td><td>传感器电路故障;传感器故障;发动机控制模块故障</td></tr><tr><td>P0386</td><td>曲轴位置传感器B-范围/性能故障</td><td>传感器电路故障;传感器故障</td></tr><tr><td>P0387</td><td>曲轴位置传感器B-电路电压过低</td><td>传感器电路对接地短路;传感器故障;发动机控制模块故障</td></tr><tr><td>P0388</td><td>曲轴位置传感器B-电路电压过高</td><td>传感器电路对蓄电池电压短路;传感器故障;发动机控制模块故障</td></tr><tr><td>P0389</td><td>曲轴位置传感器B-电路间歇故障</td><td>传感器电路接触不良;传感器故障;发动机控制模块故障</td></tr><tr><td>P0390</td><td>气缸列2,凸轮轴位置传感器B-电路故障</td><td>传感器电路故障;传感器故障;发动机控制模块故障</td></tr><tr><td>P0391</td><td>气缸列2,凸轮轴位置传感器B-范围/性能故障</td><td>传感器电路故障;传感器故障</td></tr><tr><td>P0392</td><td>气缸列2,凸轮轴位置传感器B-电路电压过低</td><td>传感器电路对接地短路;传感器故障;发动机控制模块故障</td></tr><tr><td>P0393</td><td>气缸列2,凸轮轴位置传感器B-电路电压过高</td><td>传感器电路对蓄电池电压短路;传感器故障;发动机控制模块故障</td></tr><tr><td>P0394</td><td>气缸列2,凸轮轴位置传感器B-电路间歇故障</td><td>传感器电路接触不良;传感器故障;发动机控制模块故障</td></tr><tr><td>P0400</td><td>废气再循环系统-流量故障</td><td rowspan=\"3\">真空管路堵塞;废气再循环阀故障;废气再循环电磁阀故障;发动机控制模块故障</td></tr><tr><td>P0401</td><td>废气再循环系统-流量不足</td></tr><tr><td>P0402</td><td>废气再循环系统-流量过大</td></tr><tr><td>P0403</td><td>废气再循环系统-电路故障</td><td>废气再循环电磁阀故障;发动机控制模块故障</td></tr><tr><td>P0404</td><td>废气再循环系统-范围/性能故障</td><td>真空管路泄漏/堵塞;废气再循环阀/废气再循环电磁阀故障</td></tr><tr><td>P0405</td><td>废气再循环阀位置传感器A-输入信号过低</td><td>传感器电路对接地短路;传感器故障;发动机控制模块故障</td></tr><tr><td>P0406</td><td>废气再循环阀位置传感器A-输入信号过高</td><td>传感器电路对蓄电池电压短路;传感器故障;发动机控制模块故障</td></tr><tr><td>P0407</td><td>废气再循环阀位置传感器B-输入信号过低</td><td>传感器电路对接地短路;传感器故障;发动机控制模块故障</td></tr><tr><td>P0408</td><td>废气再循环阀位置传感器B-输入信号过高</td><td>传感器电路对蓄电池电压短路;传感器故障;发动机控制模块故障</td></tr><tr><td>P0409</td><td>废气再循环传感器A-电路故障</td><td>传感器电路接触不良;传感器故障;发动机控制模块故障</td></tr><tr><td>P0410</td><td>二次空气喷射系统-故障</td><td>二次空气喷射阀故障;二次空气喷射电磁阀故障;发动机控制模块故障</td></tr><tr><td>P0411</td><td>二次空气喷射系统-流量不正确</td><td>二次空气喷射泵故障;二次空气喷射阀故障;二次空气喷射系统管路故障</td></tr><tr><td>P0412</td><td>二次空气喷射电磁阀A-电路故障</td><td rowspan=\"6\">电磁阀电路短路;电磁阀故障;发动机控制模块故障</td></tr><tr><td>P0413</td><td>二次空气喷射电磁阀A-电路断路</td></tr><tr><td>P0414</td><td>二次空气喷射电磁阀A-电路短路</td></tr><tr><td>P0415</td><td>二次空气喷射电磁阀B-电路故障</td></tr><tr><td>P0416</td><td>二次空气喷射电磁阀B-电路断路</td></tr><tr><td>P0417</td><td>二次空气喷射电磁阀B-电路短路</td></tr><tr><td>P0418</td><td>二次空气喷射泵继电器A-电路故障</td><td rowspan=\"2\">二次空气喷射泵继电器电路故障;二次空气喷射泵继电器故障;发动机控制模块故障</td></tr><tr><td>P0419</td><td>二次空气喷射泵继电器B-电路故障</td></tr><tr><td>P0420</td><td>气缸列1,催化转化器系统-转化效率低于门限值</td><td rowspan=\"5\">催化转化器故障;催化转化器电路故障;氧传感器故障</td></tr><tr><td>P0421</td><td>气缸列1,催化转化器(暖机期间)-转化效率低于门限值</td></tr><tr><td>P0422</td><td>气缸列1,主催化转化器-转化效率低于门限值</td></tr><tr><td>P0423</td><td>气缸列1,加热后的催化转化器-转化效率低于门限值</td></tr><tr><td>P0424</td><td>气缸列1,加热后的催化转化器-温度低于门限值</td></tr><tr><td>P0425</td><td>气缸列1,催化转化器温度传感器电路故障</td><td rowspan=\"2\">传感器电路接触不良;传感器故障;发动机控制模块故障</td></tr><tr><td>P0426</td><td>气缸列1,催化转化器温度传感器-范围/性能故障</td></tr><tr><td>P0427</td><td>气缸列1,催化转化器温度传感器电路电压过低</td><td>传感器电路对接地短路;传感器故障</td></tr><tr><td>P0428</td><td>气缸列1,催化转化器温度传感器电路电压过高</td><td>传感器电路对蓄电池电压短路;传感器故障</td></tr><tr><td>P0429</td><td>气缸列1,催化转化器加热器-电路故障</td><td>电路故障;继电器故障;发动机控制模块故障</td></tr><tr><td>P0430</td><td>气缸列2,催化转化器系统-转化效率低于门限值</td><td rowspan=\"5\">催化转化器故障;催化转化器电路故障;氧传感器故障</td></tr><tr><td>P0431</td><td>气缸列2,催化转化器(暖机期间)-转化效率低于门限值</td></tr><tr><td>P0432</td><td>气缸列2,主催化转化器-转化效率低于门限值</td></tr><tr><td>P0433</td><td>气缸列2,加热后的催化转化器-转化效率低于门限值</td></tr><tr><td>P0434</td><td>气缸列2,加热后的催化转化器-温度低于门限值</td></tr><tr><td>P0435</td><td>气缸列2,催化转化器温度传感器电路故障</td><td rowspan=\"2\">传感器电路接触不良;传感器故障;发动机控制模块故障</td></tr><tr><td>P0436</td><td>气缸列2,催化转化器温度传感器-范围/性能故障</td></tr><tr><td>P0437</td><td>气缸列2,催化转化器温度传感器电路电压过低</td><td>传感器电路对接地短路;传感器故障</td></tr><tr><td>P0438</td><td>气缸列2,催化转化器温度传感器电路电压过高</td><td>传感器电路对蓄电池电压短路;传感器故障</td></tr><tr><td>P0439</td><td>气缸列2,催化转化器加热器-电路故障</td><td>电路故障;继电器故障;发动机控制模块故障</td></tr><tr><td>P0440</td><td>燃油蒸气排放系统-故障</td><td rowspan=\"2\">软管连接故障;进气泄漏;燃油蒸气排放炭罐清污阀故障</td></tr><tr><td>P0441</td><td>燃油蒸气排放系统-流量不正确</td></tr><tr><td>P0442</td><td>燃油蒸气排放系统-发生轻微泄漏</td><td>软管连接故障;进气泄漏;燃油蒸气排放炭罐清污阀故障;燃油蒸气排放炭罐故障</td></tr><tr><td>P0443</td><td>燃油蒸气排放炭罐清污阀-电路故障</td><td rowspan=\"3\">燃油蒸气排放炭罐清污阀电路短路;燃油蒸气排放炭罐清污阀故障;发动机控制模块故障</td></tr><tr><td>P0444</td><td>燃油蒸气排放炭罐清污阀-电路断路</td></tr><tr><td>P0445</td><td>燃油蒸气排放炭罐清污阀-电路短路</td></tr><tr><td>P0446</td><td>燃油蒸气排放系统,通风控制-电路故障</td><td>电路故障;燃油蒸气排放炭罐清污阀故障;发动机控制模块故障</td></tr><tr><td>P0447</td><td>燃油蒸气排放系统,通风控制-电路断路</td><td>电路断路;燃油蒸气排放炭罐清污阀故障;发动机控制模块故障</td></tr><tr><td>P0448</td><td>燃油蒸气排放系统,通风控制-电路短路</td><td>电路短路;燃油蒸气排放炭罐清污阀故障;发动机控制模块故障</td></tr><tr><td>P0449</td><td>燃油蒸气排放系统,通风阀-电路故障</td><td>电路故障;燃油蒸气排放炭罐清污阀故障;发动机控制模块故障</td></tr><tr><td>P0450</td><td>燃油箱压力传感器-电路故障</td><td>传感器电路故障;传感器故障;发动机控制模块故障</td></tr><tr><td>P0451</td><td>燃油箱压力传感器-范围/性能故障</td><td>燃油箱压力传感器故障</td></tr><tr><td>P0452</td><td>燃油箱压力传感器输入信号过低</td><td>传感器电路对接地短路;传感器故障;发动机控制模块故障</td></tr><tr><td>P0453</td><td>燃油箱压力传感器输入信号过高</td><td>传感器电路对蓄电池电压短路;传感器故障;发动机控制模块故障</td></tr><tr><td>P0454</td><td>燃油箱压力传感器电路间歇故障</td><td>传感器电路接触不良;传感器故障;发动机控制模块故障</td></tr><tr><td>P0455</td><td>燃油蒸气排放控制系统-检测到大量泄漏</td><td>软管连接故障;进气泄漏;燃油蒸气排放炭罐;燃油蒸气排放清污阀</td></tr><tr><td>P0456</td><td>燃油蒸气排放控制系统-检测到少量泄漏</td><td>机械故障;软管连接故障;燃油箱压力传感器故障</td></tr><tr><td>P0457</td><td>燃油蒸气排放控制系统-检测到泄漏(燃油箱加注盖丢失或未关)</td><td>机械故障;软管连接故障;燃油箱压力传感器故障</td></tr><tr><td>P0458</td><td>燃油蒸气排放控制系统,燃油蒸气排放阀-电路电压过低</td><td>电路对接地短路;燃油蒸气排放阀故障</td></tr><tr><td>P0459</td><td>燃油蒸气排放控制系统,燃油蒸气排放阀-电路电压过高</td><td>电路对蓄电池电压短路;燃油蒸气排放阀故障</td></tr><tr><td>P0460</td><td>燃油箱油位传感器-电路故障</td><td>传感器电路故障;传感器故障;发动机控制模块故障</td></tr><tr><td>P0461</td><td>燃油箱油位传感器-范围/性能故障</td><td>传感器电路故障;传感器故障</td></tr><tr><td>P0462</td><td>燃油箱油位传感器-电路电压过低</td><td>传感器电路对接地短路;传感器故障;发动机控制模块故障</td></tr><tr><td>P0463</td><td>燃油箱油位传感器-电路电压过高</td><td>传感器电路对蓄电池电压短路;传感器故障;发动机控制模块故障</td></tr><tr><td>P0464</td><td>燃油箱油位传感器-电路间歇故障</td><td>电路接触不良;传感器故障;发动机控制模块故障</td></tr><tr><td>P0465</td><td>燃油蒸气排放系统活性炭罐清污流量传感器-电路故障</td><td>传感器电路故障;传感器故障;发动机控制模块故障</td></tr><tr><td>P0466</td><td>燃油蒸气排放系统活性炭罐清污流量传感器-范围/性能故障</td><td>传感器电路故障;传感器故障</td></tr><tr><td>P0467</td><td>燃油蒸气排放系统活性炭罐清污流量传感器-电路电压过低</td><td>传感器电路对接地短路;传感器故障;发动机控制模块故障</td></tr><tr><td>P0468</td><td>燃油蒸气排放系统活性炭罐清污流量传感器-电路电压过高</td><td>传感器电路对蓄电池电压短路;传感器故障;发动机控制模块故障</td></tr><tr><td>P0469</td><td>燃油蒸气排放系统活性炭罐清污流量传感器-电路间歇故障</td><td>电路接触不良;传感器故障;发动机控制模块故障</td></tr><tr><td>P0470</td><td>排气压力传感器-电路故障</td><td>传感器电路故障;传感器故障;发动机控制模块故障</td></tr><tr><td>P0471</td><td>排气压力传感器-范围/性能故障</td><td>传感器电路故障;传感器故障</td></tr><tr><td>P0472</td><td>排气压力传感器-电路电压过低</td><td>传感器电路对接地短路;传感器故障;发动机控制模块故障</td></tr><tr><td>P0473</td><td>排气压力传感器-电路电压过高</td><td>传感器电路对蓄电池电压短路;传感器故障;发动机控制模块故障</td></tr><tr><td>P0474</td><td>排气压力传感器-电路间歇故障</td><td>电路接触不良;传感器故障;发动机控制模块故障</td></tr><tr><td>P0475</td><td>排气压力控制阀-电路故障</td><td>压力控制阀电路故障;压力控制阀故障;发动机控制模块故障</td></tr><tr><td>P0476</td><td>排气压力控制阀-范围/性能故障</td><td>压力控制阀电路故障;压力控制阀故障</td></tr><tr><td>P0477</td><td>排气压力控制阀-电路电压过低</td><td>压力控制阀电路对接地短路;压力控制阀故障;发动机控制模块故障</td></tr><tr><td>P0478</td><td>排气压力控制阀-电路电压过高</td><td>压力控制阀电路对蓄电池电压短路;压力控制阀故障;发动机控制模块故障</td></tr><tr><td>P0479</td><td>排气压力控制阀-电路间歇故障</td><td>电路接触不良;压力控制阀故障;发动机控制模块故障</td></tr><tr><td>P0480</td><td>发动机冷却鼓风机电机1-电路故障</td><td rowspan=\"3\">电机电路故障;鼓风机电机故障;发动机控制模块故障</td></tr><tr><td>P0481</td><td>发动机冷却鼓风机电机2-电路故障</td></tr><tr><td>P0482</td><td>发动机冷却鼓风机电机3-电路故障</td></tr><tr><td>P0483</td><td>发动机冷却鼓风机电机故障</td><td rowspan=\"3\">电路故障;鼓风机电机故障;发动机控制模块故障</td></tr><tr><td>P0484</td><td>发动机冷却鼓风机电机电路故障</td></tr><tr><td>P0485</td><td>发动机冷却鼓风机电机,供电/接地电路故障</td></tr><tr><td>P0486</td><td>废气再循环阀位置传感器B-电路故障</td><td>电路接触不良;传感器故障;发动机控制模块故障</td></tr><tr><td>P0487</td><td>废气再循环系统,节气门位置控制-电路故障</td><td rowspan=\"2\">电路接触不良;发动机控制模块故障</td></tr><tr><td>P0488</td><td>废气再循环系统,节气门位置控制-范围/性能故障</td></tr><tr><td>P0489</td><td>废气再循环系统-电路电压过低</td><td>电路对接地短路;废气再循环阀故障</td></tr><tr><td>P0490</td><td>废气再循环系统-电路电压过高</td><td>电路对蓄电池电压短路;废气再循环阀故障</td></tr><tr><td>P0491</td><td>气缸列1,二次空气喷射系统故障</td><td rowspan=\"2\">二次空气喷射系统电磁阀故障;系统软管连接故障;机械故障</td></tr><tr><td>P0492</td><td>气缸列2,二次空气喷射系统故障</td></tr><tr><td>P0493</td><td>发动机冷却鼓风机电机转速过高(离合器锁止)</td><td>电机离合器故障;机械故障</td></tr><tr><td>P0494</td><td>发动机冷却鼓风机电机转速过低</td><td rowspan=\"2\">继电器故障;电机故障;机械故障</td></tr><tr><td>P0495</td><td>发动机冷却鼓风机电机转速过高</td></tr><tr><td>P0496</td><td>燃油蒸气排放控制系统-清污流量过高</td><td>燃油蒸气排放控制阀故障;机械故障</td></tr><tr><td>P0497</td><td>燃油蒸气排放控制系统-清污流量过低</td><td>燃油蒸气排放控制阀故障;软管堵塞;机械故障</td></tr><tr><td>P0498</td><td>燃油蒸气排放控制系统,通风控制-电路电压过低</td><td>电路对接地短路;燃油蒸气排放控制阀故障</td></tr><tr><td>P0499</td><td>燃油蒸气排放控制系统,通风控制-电路电压过高</td><td>电路对蓄电池电压短路;燃油蒸气排放控制阀故障</td></tr><tr><td>P0500</td><td>车速传感器-电路故障</td><td>传感器电路故障;传感器故障;发动机控制模块故障</td></tr><tr><td>P0501</td><td>车速传感器-范围/性能故障</td><td>车速表故障;车速传感器故障;CAN网络数据总线故障</td></tr><tr><td>P0502</td><td>车速传感器-电路电压过低</td><td>电路对接地短路;传感器故障;发动机控制模块故障</td></tr><tr><td>P0503</td><td>车速传感器-电路电压过高/电路间歇故障</td><td>电路连接不良;仪表板故障;传感器故障</td></tr><tr><td>P0504</td><td>制动踏板位置传感器A/B相互关系不正确</td><td>电路故障;机械故障</td></tr><tr><td>P0505</td><td>怠速控制系统故障</td><td rowspan=\"3\">电路故障;怠速控制系统执行器/怠速控制阀故障;节气门电机故障;节气门卡滞;发动机控制模块故障</td></tr><tr><td>P0506</td><td>怠速控制系统-发动机转速过低</td></tr><tr><td>P0507</td><td>怠速控制系统-发动机转速过高</td></tr><tr><td>P0508</td><td>怠速空气控制-电路电压过低</td><td>电路对接地短路;怠速空气控制阀故障;发动机控制模块故障</td></tr><tr><td>P0509</td><td>怠速空气控制-电路电压过高</td><td>电路对蓄电池电压短路;怠速空气控制阀故障;发动机控制模块故障</td></tr><tr><td>P0510</td><td>节气门关闭开关-电路故障</td><td>电路故障;开关故障;发动机控制模块故障</td></tr><tr><td>P0511</td><td>怠速空气控制-电路故障</td><td>电路故障;怠速空气控制阀故障;发动机控制模块故障</td></tr><tr><td>P0512</td><td>发动机启动机请求电路-故障</td><td>电路故障;防非法启动系统故障;继电器故障</td></tr><tr><td>P0513</td><td>点火钥匙不正确</td><td>防非法启动系统</td></tr><tr><td>P0514</td><td>蓄电池温度传感器-电路故障</td><td rowspan=\"2\">传感器故障;传感器电路故障;电路连接不良</td></tr><tr><td>P0515</td><td>蓄电池温度传感器-范围/性能故障</td></tr><tr><td>P0516</td><td>蓄电池温度传感器-电路电压过低</td><td>传感器电路对接地短路;传感器故障</td></tr><tr><td>P0517</td><td>蓄电池温度传感器-电路电压过高</td><td>传感器电路对蓄电池电压短路;传感器故障</td></tr><tr><td>P0518</td><td>怠速空气控制阀-电路间歇故障</td><td rowspan=\"2\">电路连接不良;怠速空气控制阀故障</td></tr><tr><td>P0519</td><td>怠速空气控制阀-性能故障</td></tr><tr><td>P0520</td><td>发动机机油压力传感器/开关-电路故障</td><td>电路故障;发动机机油压力传感器/开关故障;发动机控制模块故障</td></tr><tr><td>P0521</td><td>发动机机油压力传感器/开关-范围/性能故障</td><td>发动机机油压力传感器/开关故障</td></tr><tr><td>P0522</td><td>发动机机油压力传感器/开关-电路电压过低</td><td>电路对接地短路;发动机机油压力传感器/开关故障</td></tr><tr><td>P0523</td><td>发动机机油压力传感器/开关-电路电压过高</td><td>电路对蓄电池电压短路;发动机机油压力传感器/开关故障</td></tr><tr><td>P0524</td><td>发动机机油压力过低</td><td>机械故障</td></tr><tr><td>P0525</td><td>定速巡航控制系统,执行器控制-电路范围/性能故障</td><td>电路故障,电路连接不良;执行器故障</td></tr><tr><td>P0526</td><td>发动机冷却鼓风机电机转速传感器-电路故障</td><td rowspan=\"2\">电路连接不良;传感器故障</td></tr><tr><td>P0527</td><td>发动机冷却鼓风机电机转速传感器-电路范围/性能故障</td></tr><tr><td>P0528</td><td>发动机冷却鼓风机电机转速传感器-无信号</td><td>电路连接不良;传感器故障</td></tr><tr><td>P0529</td><td>发动机冷却鼓风机电机转速传感器-电路间歇故障</td><td>电路连接不良;发动机控制模块故障</td></tr><tr><td>P0530</td><td>空调制冷剂压力传感器-电路故障</td><td>电路故障;传感器故障;发动机控制模块故障</td></tr><tr><td>P0531</td><td>空调制冷剂压力传感器-范围/性能故障</td><td>传感器/开关故障</td></tr><tr><td>P0532</td><td>空调制冷剂压力传感器-电路电压过低</td><td>电路对接地短路;传感器故障</td></tr><tr><td>P0533</td><td>空调制冷剂压力传感器-电路电压过高</td><td>电路对蓄电池电压短路;传感器故障</td></tr><tr><td>P0534</td><td>空调制冷剂泄漏</td><td>空调泄漏;空调制冷剂压力传感器故障</td></tr><tr><td>P0535</td><td>空调蒸发器温度传感器-电路故障</td><td>电路故障;传感器故障;发动机控制模块故障</td></tr><tr><td>P0536</td><td>空调蒸发器温度传感器-范围/性能故障</td><td>传感器故障</td></tr><tr><td>P0537</td><td>空调蒸发器温度传感器-电路电压过低</td><td>电路对接地短路;传感器故障</td></tr><tr><td>P0538</td><td>空调蒸发器温度传感器-电路电压过高</td><td>电路对蓄电池电压短路;传感器故障</td></tr><tr><td>P0539</td><td>空调蒸发器温度传感器-电路间歇故障</td><td>电路连接不良;传感器故障;发动机控制模块故障</td></tr><tr><td>P0540</td><td>进气空气加热器A-电路故障</td><td>进气空气加热器电路故障;加热器故障</td></tr><tr><td>P0541</td><td>进气空气加热器A-电路电压过低</td><td>电路对接地短路;加热器故障</td></tr><tr><td>P0542</td><td>进气空气加热器A-电路电压过高</td><td>电路对蓄电池电压短路;加热器故障</td></tr><tr><td>P0543</td><td>进气空气加热器A-电路断路</td><td>电路故障;加热器故障</td></tr><tr><td>P0544</td><td>气缸列1,废气温度传感器1-电路电压过低</td><td>电路对接地短路;传感器故障</td></tr><tr><td>P0545</td><td>气缸列1,废气温度传感器1-电路电压过高</td><td>电路对蓄电池电压短路;传感器故障</td></tr><tr><td>P0546</td><td>气缸列1,废气温度传感器1-电路断路</td><td>电路故障;传感器故障</td></tr><tr><td>P0547</td><td>气缸列2,废气温度传感器1-电路电压过低</td><td>电路对接地短路;传感器故障</td></tr><tr><td>P0548</td><td>气缸列2,废气温度传感器1-电路电压过高</td><td>电路对蓄电池电压短路;传感器故障</td></tr><tr><td>P0549</td><td>气缸列2,废气温度传感器1-电路断路</td><td>电路故障;传感器故障</td></tr><tr><td>P0550</td><td>动力转向传感器/开关-电路故障</td><td>电路故障;动力转向传感器/开关故障;发动机控制模块故障</td></tr><tr><td>P0551</td><td>动力转向传感器/开关-范围/性能故障</td><td>动力转向传感器/开关故障</td></tr><tr><td>P0552</td><td>动力转向传感器/开关-电路电压过低</td><td>电路对接地短路;动力转向传感器/开关故障</td></tr><tr><td>P0553</td><td>动力转向传感器/开关-电路电压过高</td><td>电路对蓄电池电压短路;动力转向传感器/开关故障</td></tr><tr><td>P0554</td><td>动力转向传感器/开关-电路间歇故障</td><td>电路接触不良;动力转向传感器/开关故障;发动机控制模块故障</td></tr><tr><td>P0555</td><td>制动助力器压力传感器-电路故障</td><td>电路故障;传感器故障;发动机控制模块故障</td></tr><tr><td>P0556</td><td>制动助力器压力传感器-范围/性能故障</td><td>传感器故障</td></tr><tr><td>P0557</td><td>制动助力器压力传感器-电路电压过低</td><td>电路对接地短路;传感器故障</td></tr><tr><td>P0558</td><td>制动助力器压力传感器-电路电压过高</td><td>电路对蓄电池电压短路;传感器故障</td></tr><tr><td>P0559</td><td>制动助力器压力传感器-电路间歇故障</td><td>电路连接不良;传感器故障;发动机控制模块故障</td></tr><tr><td>P0560</td><td>系统电压-故障</td><td rowspan=\"3\">蓄电池故障;发电机故障;电路连接不良</td></tr><tr><td>P0561</td><td>系统电压-不稳定</td></tr><tr><td>P0562</td><td>系统电压-过低</td></tr><tr><td>P0563</td><td>系统电压-过高</td><td>发电机故障</td></tr><tr><td>P0564</td><td>定速巡航控制系统,多功能开关输入A-信号错误</td><td>电路连接不良;多功能开关故障;机械故障</td></tr><tr><td>P0565</td><td>定速巡航控制系统,多功能开关,ON信号故障</td><td rowspan=\"5\">多功能开关电路故障;多功能开关故障;发动机控制模块故障</td></tr><tr><td>P0566</td><td>定速巡航控制系统,多功能开关,OFF信号故障</td></tr><tr><td>P0567</td><td>定速巡航控制系统,多功能开关,RESUME信号故障</td></tr><tr><td>P0568</td><td>定速巡航控制系统,多功能开关,SET信号故障</td></tr><tr><td>P0569</td><td>定速巡航控制系统,多功能开关,COAST信号故障</td></tr><tr><td>P0570</td><td>定速巡航控制系统,加速踏板位置传感器信号错误</td><td>加速踏板位置传感器故障;发动机控制模块故障</td></tr><tr><td>P0571</td><td>定速巡航控制系统/制动开关A-电路故障</td><td>定速巡航控制系统/制动开关故障;定速巡航控制系统/制动开关电路故障;发动机控制模块故障</td></tr><tr><td>P0572</td><td>定速巡航控制系统/制动开关A-电路电压过低</td><td>电路对接地短路;定速巡航控制系统/制动开关电路故障;发动机控制模块故障</td></tr><tr><td>P0573</td><td>定速巡航控制系统/制动开关A-电路电压过高</td><td>电路对蓄电池电压短路;定速巡航控制系统/制动开关电路故障;发动机控制模块故障</td></tr><tr><td>P0574</td><td>定速巡航控制系统-车速过高</td><td>机械故障</td></tr><tr><td>P0575</td><td>定速巡航控制系统-输入电路故障</td><td>电路故障;电路连接不良;机械故障;发动机控制模块故障</td></tr><tr><td>P0576</td><td>定速巡航控制系统-输入电路电压过低</td><td>电路对接地短路</td></tr><tr><td>P0577</td><td>定速巡航控制系统-输入电路电压过高</td><td>电路对蓄电池电压短路</td></tr><tr><td>P0578</td><td>定速巡航控制系统,多功能开关输入A-电路故障</td><td rowspan=\"2\">电路连接不良;多功能开关故障;机械故障</td></tr><tr><td>P0579</td><td>定速巡航控制系统,多功能开关输入A-电路范围/性能故障</td></tr><tr><td>P0580</td><td>定速巡航控制系统,多功能开关输入A-电路电压过低</td><td>电路对接地短路;多功能开关故障;机械故障</td></tr><tr><td>P0581</td><td>定速巡航控制系统,多功能开关输入A-电路电压过高</td><td>电路对蓄电池电压短路;多功能开关故障;机械故障</td></tr><tr><td>P0582</td><td>定速巡航控制系统,真空控制-电路断路</td><td>电路故障;真空控制电磁阀故障</td></tr><tr><td>P0583</td><td>定速巡航控制系统,真空控制-电路电压过低</td><td>电路对接地短路;真空控制电磁阀故障</td></tr><tr><td>P0584</td><td>定速巡航控制系统,真空控制-电路电压过高</td><td>电路对蓄电池电压短路;真空控制电磁阀故障</td></tr><tr><td>P0585</td><td>定速巡航控制系统,多功能开关输入A/B关系错乱</td><td>机械故障</td></tr><tr><td>P0586</td><td>定速巡航控制系统,通风控制-电路断路</td><td>电路故障;通风控制电磁阀故障</td></tr><tr><td>P0587</td><td>定速巡航控制系统,通风控制-电路电压过低</td><td>电路对接地短路;通风控制电磁阀故障</td></tr><tr><td>P0588</td><td>定速巡航控制系统,通风控制-电路电压过高</td><td>电路对蓄电池电压短路;通风控制电磁阀故障</td></tr><tr><td>P0589</td><td>定速巡航控制系统,多功能开关输入B-电路故障</td><td rowspan=\"3\">电路故障;多功能开关故障;机械故障</td></tr><tr><td>P0590</td><td>定速巡航控制系统,多功能开关输入B-电路故障(卡滞在某一状态)</td></tr><tr><td>P0591</td><td>定速巡航控制系统,多功能开关输入B-电路范围/性能故障</td></tr><tr><td>P0592</td><td>定速巡航控制系统,多功能开关输入B-电路电压过低</td><td>电路对接地短路;多功能开关故障;机械故障</td></tr><tr><td>P0593</td><td>定速巡航控制系统,多功能开关输入B-电路电压过高</td><td>电路对蓄电池电压短路;多功能开关故障;机械故障</td></tr><tr><td>P0594</td><td>定速巡航控制系统,执行器控制-电路断路</td><td>电路故障;执行器故障</td></tr><tr><td>P0595</td><td>定速巡航控制系统,执行器控制-电路电压过低</td><td>电路对接地短路;执行器故障</td></tr><tr><td>P0596</td><td>定速巡航控制系统,执行器控制-电路电压过高</td><td>电路对蓄电池电压短路;执行器故障</td></tr><tr><td>P0597</td><td>恒温器加热器控制系统-电路断路</td><td>电路故障;继电器故障;恒温器加热器故障</td></tr><tr><td>P0598</td><td>恒温器加热器控制系统-电路电压过低</td><td>电路对接地短路;继电器故障;恒温器加热器故障</td></tr><tr><td>P0599</td><td>恒温器加热器控制系统-电路电压过高</td><td>电路对蓄电池电压短路;继电器故障;恒温器加热器故障</td></tr><tr><td>P0600</td><td>CAN(控制器区域网络)数据总线-故障</td><td>电路故障;与总线相连的系统故障;发动机控制模块故障</td></tr><tr><td>P0601</td><td>发动机控制模块-存储器检验和出错</td><td rowspan=\"5\">发动机控制模块故障</td></tr><tr><td>P0602</td><td>发动机控制模块-编程错误</td></tr><tr><td>P0603</td><td>发动机控制模块-KAM(保持存储器)错误</td></tr><tr><td>P0604</td><td>发动机控制模块-RAM(随机存储器)错误</td></tr><tr><td>P0605</td><td>发动机控制模块-ROM(只读存储器)错误</td></tr><tr><td>P0606</td><td>发动机控制模块/动力传动控制模块-处理器故障</td><td>发动机控制模块/动力传动控制模块故障</td></tr><tr><td>P0607</td><td>发动机控制模块-性能故障</td><td rowspan=\"4\">发动机控制模块故障</td></tr><tr><td>P0608</td><td>发动机控制模块,车速传感器信号A-故障</td></tr><tr><td>P0609</td><td>发动机控制模块,车速传感器信号B-故障</td></tr><tr><td>P0610</td><td>发动机控制模块车辆选择错误</td></tr><tr><td>P0611</td><td>喷油器控制模块-性能故障</td><td>喷油器控制模块</td></tr><tr><td>P0612</td><td>喷油器控制模块-控制继电器电路故障</td><td>电路故障;继电器故障;喷油器控制模块故障</td></tr><tr><td>P0613</td><td>变速器控制模块-处理器故障</td><td>变速器控制模块故障</td></tr><tr><td>P0614</td><td>发动机控制模块/变速器控制模块-不匹配</td><td>发动机控制模块/变速器控制模块故障</td></tr><tr><td>P0615</td><td>启动机电机继电器-电路故障</td><td>电路连接不良;继电器故障;发动机控制模块故障</td></tr><tr><td>P0616</td><td>启动机电机继电器-电路电压过低</td><td>电路对接地短路;启动机电机继电器故障;发动机控制模块故障</td></tr><tr><td>P0617</td><td>启动机电机继电器-电路电压过高</td><td>电路对蓄电池电压短路;启动机电机继电器故障;发动机控制模块故障</td></tr><tr><td>P0618</td><td>代用燃料控制模块保持存储器(KAM)错误</td><td rowspan=\"2\">代用燃料控制模块故障</td></tr><tr><td>P0619</td><td>代用燃料控制模块随机存储器(RAM)/只读存储器错误</td></tr><tr><td>P0620</td><td>发电机控制电路故障</td><td>电路故障;发电机故障;蓄电池故障;发动机控制模块故障</td></tr><tr><td>P0621</td><td>发电机灯“L”端子控制电路故障</td><td>发电机报警灯故障;发动机控制模块故障</td></tr><tr><td>P0622</td><td>发电机磁场“F”端子控制电路故障</td><td>电路故障;发电机故障;蓄电池故障;发动机控制模块故障</td></tr><tr><td>P0623</td><td>发电机灯控制电路故障</td><td>报警灯电路接触不良;报警灯灯泡故障;发动机控制模块故障</td></tr><tr><td>P0624</td><td>燃油加注盖报警灯控制电路故障</td><td>报警灯电路接触不良;报警灯灯泡故障;发动机控制模块故障</td></tr><tr><td>P0625</td><td>发电机磁场“F”端子-电压过低</td><td>电路对接地短路;发电机故障</td></tr><tr><td>P0626</td><td>发电机磁场“F”端子-电压过高</td><td>电路对蓄电池电压短路;发电机故障</td></tr><tr><td>P0627</td><td>燃油泵控制-电路断路</td><td>电路故障;燃油泵继电器故障;燃油泵故障</td></tr><tr><td>P0628</td><td>燃油泵控制-电路电压过低</td><td>电路对接地短路;燃油泵继电器故障;燃油泵故障</td></tr><tr><td>P0629</td><td>燃油泵控制-电路电压过高</td><td>电路对蓄电池电压短路;燃油泵继电器故障;燃油泵故障</td></tr><tr><td>P0630</td><td>车辆识别编码(VIN)未经编程或不匹配-发动机控制模块/变速器控制模块</td><td>发动机控制模块/变速器控制模块故障</td></tr><tr><td>P0631</td><td>车辆识别编码(VIN)未经编程或不匹配-变速器控制模块</td><td>变速器控制模块故障</td></tr><tr><td>P0632</td><td>里程表未编程-发动机控制模块/变速器控制模块</td><td rowspan=\"2\">编程故障;发动机控制模块/变速器控制模块故障</td></tr><tr><td>P0633</td><td>点火钥匙未编程-发动机控制模块/变速器控制模块</td></tr><tr><td>P0634</td><td>动力传动控制模块/发动机控制模块/变速器控制模块-内部温度过高</td><td>动力传动控制模块/发动机控制模块/变速器控制模块故障;机械故障</td></tr><tr><td>P0635</td><td>动力转向控制-电路故障</td><td>电路接触不良;动力转向油压传感器/开关故障;发动机控制模块故障</td></tr><tr><td>P0636</td><td>动力转向控制-电路电压过低</td><td>电路对接地短路;动力转向油压传感器/开关故障;发动机控制模块故障</td></tr><tr><td>P0637</td><td>动力转向控制-电路电压过高</td><td>电路对蓄电池电压短路;动力转向油压传感器/开关故障;发动机控制模块故障</td></tr><tr><td>P0638</td><td>气缸列1,节气门控制执行器-范围/性能故障</td><td>未执行基本设定;怠速控制执行器/节气门电机故障;加速踏板位置传感器故障</td></tr><tr><td>P0639</td><td>气缸列2,节气门控制执行器-范围/性能故障</td><td>节气门控制单元故障</td></tr><tr><td>P0640</td><td>进气预热器控制-电路故障</td><td>电路故障;继电器故障;进气预热器故障</td></tr><tr><td>P0641</td><td>传感器参考电压A-电路断路</td><td>传感器参考电压电路故障</td></tr><tr><td>P0642</td><td>发动机控制模块,爆震控制-故障</td><td>发动机控制模块故障</td></tr><tr><td>P0643</td><td>传感器参考电压A-电路电压过高</td><td>电路对蓄电池电压短路</td></tr><tr><td>P0644</td><td>驾驶员显示,串行通信-电路故障</td><td>电路故障;CAN数据总线故障;发动机控制模块故障</td></tr><tr><td>P0645</td><td>空调(A/C)压缩机离合器继电器控制电路故障</td><td>空调压缩机离合器继电器故障</td></tr><tr><td>P0646</td><td>空调(A/C)压缩机离合器继电器控制电路电压过低</td><td>电路对接地短路;空调压缩机离合器继电器故障</td></tr><tr><td>P0647</td><td>空调(A/C)压缩机离合器继电器控制电路电压过高</td><td>电路对蓄电池电压短路;空调压缩机离合器继电器故障</td></tr><tr><td>P0648</td><td>防非法启动报警灯控制电路故障</td><td>电路连接不良;报警灯灯泡故障;发动机控制模块故障</td></tr><tr><td>P0649</td><td>定速巡航控制指示灯控制电路故障</td><td>电路连接不良;指示灯灯泡故障;发动机控制模块故障</td></tr><tr><td>P0650</td><td>故障指示灯(MIL)控制电路故障</td><td>故障指示灯故障;发动机控制模块故障</td></tr><tr><td>P0651</td><td>传感器参考电压B-电路断路</td><td>传感器参考电压电路故障</td></tr><tr><td>P0652</td><td>传感器参考电压B-电路电压过高</td><td>电路对接地短路</td></tr><tr><td>P0653</td><td>传感器参考电压B-电路电压过高</td><td>电路对蓄电池电压短路</td></tr><tr><td>P0654</td><td>发动机转速输出电路故障</td><td>电路故障;发动机控制模块故障</td></tr><tr><td>P0655</td><td>发动机过热指示灯输出控制电路</td><td>电路故障;指示灯故障;发动机控制模块故障</td></tr><tr><td>P0656</td><td>燃油液面信号输出电路故障</td><td>电路故障;发动机控制模块故障</td></tr><tr><td>P0657</td><td>执行器供电电压-电路断路</td><td>执行器供电电压电路故障</td></tr><tr><td>P0658</td><td>执行器供电电压-电路电压过高</td><td>电路对接地短路;执行器故障</td></tr><tr><td>P0659</td><td>执行器供电电压-电路电压过高</td><td>电路对蓄电池电压短路;执行器故障</td></tr><tr><td>P0660</td><td>气缸列1,进气歧管空气控制电磁阀-电路断路</td><td>进气歧管空气控制电磁阀故障</td></tr><tr><td>P0661</td><td>气缸列1,进气歧管空气控制电磁阀-电路电压过低</td><td>电路对接地短路;进气歧管空气控制电磁阀故障</td></tr><tr><td>P0662</td><td>气缸列1,进气歧管空气控制电磁阀-电路电压过高</td><td>电路对蓄电池电压短路;进气歧管空气控制电磁阀故障</td></tr><tr><td>P0663</td><td>气缸列2,进气歧管空气控制电磁阀-电路断路</td><td>进气歧管空气控制电磁阀故障</td></tr><tr><td>P0664</td><td>气缸列2,进气歧管空气控制电磁阀-电路电压过低</td><td>电路对接地短路;进气歧管空气控制电磁阀故障</td></tr><tr><td>P0665</td><td>气缸列2,进气歧管空气控制电磁阀-电路电压过高</td><td>电路对蓄电池电压短路;进气歧管空气控制电磁阀故障</td></tr><tr><td>P0666</td><td>发动机控制模块/动力传动控制模块/变速器控制模块内部温度传感器-电路故障</td><td rowspan=\"2\">传感器故障;发动机控制模块/动力传动控制模块/变速器控制模块故障</td></tr><tr><td>P0667</td><td>发动机控制模块/动力传动控制模块/变速器控制模块内部温度传感器-范围/性能故障</td></tr><tr><td>P0668</td><td>发动机控制模块/动力传动控制模块/变速器控制模块内部温度传感器-电路电压过低</td><td>电路对接地短路;传感器故障;发动机控制模块/动力传动控制模块/变速器控制模块故障</td></tr><tr><td>P0669</td><td>发动机控制模块/动力传动控制模块/变速器控制模块内部温度传感器-电路电压过高</td><td>电路对蓄电池电压短路;传感器故障;发动机控制模块/动力传动控制模块/变速器控制模块故障</td></tr><tr><td>P0670</td><td>预热塞控制模块-电路故障</td><td>电路接触不良;预热塞控制模块故障;预热塞故障;发动机控制模块故障</td></tr></table>",
+                "table_type": "complex_table",
+                "table_nest_level": 1
+            },
+            "bbox": [
+                97,
+                624,
+                902,
+                865
+            ]
+        },
+        {
+            "type": "page_aside_text",
+            "content": {
+                "page_aside_text_content": [
+                    {
+                        "type": "text",
+                        "content": "第一章 汽车自诊断概论"
+                    }
+                ]
+            },
+            "bbox": [
+                31,
+                107,
+                50,
+                231
+            ]
+        },
+        {
+            "type": "page_header",
+            "content": {
+                "page_header_content": [
+                    {
+                        "type": "text",
+                        "content": "1. 2023年1月1日"
+                    }
+                ]
+            },
+            "bbox": [
+                452,
+                43,
+                551,
+                55
+            ]
+        },
+        {
+            "type": "page_number",
+            "content": {
+                "page_number_content": [
+                    {
+                        "type": "text",
+                        "content": "10"
+                    }
+                ]
+            },
+            "bbox": [
+                112,
+                885,
+                136,
+                901
+            ]
+        }
+    ],
+    [
+        {
+            "type": "table",
+            "content": {
+                "image_source": {
+                    "path": "images/"
+                },
+                "table_caption": [],
+                "table_footnote": [],
+                "html": "",
+                "table_type": "simple_table",
+                "table_nest_level": 1
+            },
+            "bbox": [
+                89,
+                124,
+                895,
+                841
+            ]
+        },
+        {
+            "type": "page_aside_text",
+            "content": {
+                "page_aside_text_content": [
+                    {
+                        "type": "text",
+                        "content": "第一章 汽车自诊断概论"
+                    }
+                ]
+            },
+            "bbox": [
+                946,
+                107,
+                968,
+                231
+            ]
+        },
+        {
+            "type": "page_number",
+            "content": {
+                "page_number_content": [
+                    {
+                        "type": "text",
+                        "content": "11"
+                    }
+                ]
+            },
+            "bbox": [
+                855,
+                887,
+                878,
+                902
+            ]
+        }
+    ],
+    [
+        {
+            "type": "table",
+            "content": {
+                "image_source": {
+                    "path": "images/"
+                },
+                "table_caption": [],
+                "table_footnote": [],
+                "html": "",
+                "table_type": "simple_table",
+                "table_nest_level": 1
+            },
+            "bbox": [
+                95,
+                118,
+                900,
+                839
+            ]
+        },
+        {
+            "type": "page_aside_text",
+            "content": {
+                "page_aside_text_content": [
+                    {
+                        "type": "text",
+                        "content": "第一章 汽车自诊断概论"
+                    }
+                ]
+            },
+            "bbox": [
+                28,
+                105,
+                48,
+                228
+            ]
+        },
+        {
+            "type": "page_number",
+            "content": {
+                "page_number_content": [
+                    {
+                        "type": "text",
+                        "content": "12"
+                    }
+                ]
+            },
+            "bbox": [
+                110,
+                882,
+                136,
+                898
+            ]
+        }
+    ],
+    [
+        {
+            "type": "table",
+            "content": {
+                "image_source": {
+                    "path": "images/"
+                },
+                "table_caption": [],
+                "table_footnote": [],
+                "html": "",
+                "table_type": "simple_table",
+                "table_nest_level": 1
+            },
+            "bbox": [
+                92,
+                115,
+                899,
+                856
+            ]
+        },
+        {
+            "type": "page_aside_text",
+            "content": {
+                "page_aside_text_content": [
+                    {
+                        "type": "text",
+                        "content": "第一章 汽车自诊断概论"
+                    }
+                ]
+            },
+            "bbox": [
+                927,
+                93,
+                964,
+                287
+            ]
+        },
+        {
+            "type": "page_number",
+            "content": {
+                "page_number_content": [
+                    {
+                        "type": "text",
+                        "content": "13"
+                    }
+                ]
+            },
+            "bbox": [
+                863,
+                875,
+                889,
+                890
+            ]
+        }
+    ],
+    [
+        {
+            "type": "table",
+            "content": {
+                "image_source": {
+                    "path": "images/"
+                },
+                "table_caption": [],
+                "table_footnote": [],
+                "html": "",
+                "table_type": "simple_table",
+                "table_nest_level": 1
+            },
+            "bbox": [
+                92,
+                122,
+                899,
+                841
+            ]
+        },
+        {
+            "type": "page_aside_text",
+            "content": {
+                "page_aside_text_content": [
+                    {
+                        "type": "text",
+                        "content": "第一章 汽车自诊断概论"
+                    }
+                ]
+            },
+            "bbox": [
+                26,
+                107,
+                47,
+                231
+            ]
+        },
+        {
+            "type": "page_header",
+            "content": {
+                "page_header_content": [
+                    {
+                        "type": "text",
+                        "content": "1"
+                    }
+                ]
+            },
+            "bbox": [
+                378,
+                42,
+                462,
+                64
+            ]
+        },
+        {
+            "type": "page_number",
+            "content": {
+                "page_number_content": [
+                    {
+                        "type": "text",
+                        "content": "14"
+                    }
+                ]
+            },
+            "bbox": [
+                110,
+                885,
+                134,
+                900
+            ]
+        }
+    ],
+    [
+        {
+            "type": "table",
+            "content": {
+                "image_source": {
+                    "path": "images/"
+                },
+                "table_caption": [],
+                "table_footnote": [],
+                "html": "",
+                "table_type": "simple_table",
+                "table_nest_level": 1
+            },
+            "bbox": [
+                92,
+                115,
+                900,
+                856
+            ]
+        },
+        {
+            "type": "page_number",
+            "content": {
+                "page_number_content": [
+                    {
+                        "type": "text",
+                        "content": "15"
+                    }
+                ]
+            },
+            "bbox": [
+                860,
+                878,
+                885,
+                894
+            ]
+        }
+    ],
+    [
+        {
+            "type": "table",
+            "content": {
+                "image_source": {
+                    "path": "images/"
+                },
+                "table_caption": [],
+                "table_footnote": [],
+                "html": "",
+                "table_type": "simple_table",
+                "table_nest_level": 1
+            },
+            "bbox": [
+                87,
+                122,
+                895,
+                868
+            ]
+        },
+        {
+            "type": "page_aside_text",
+            "content": {
+                "page_aside_text_content": [
+                    {
+                        "type": "text",
+                        "content": "第一章 汽车自诊断概论"
+                    }
+                ]
+            },
+            "bbox": [
+                23,
+                105,
+                43,
+                230
+            ]
+        },
+        {
+            "type": "page_number",
+            "content": {
+                "page_number_content": [
+                    {
+                        "type": "text",
+                        "content": "16"
+                    }
+                ]
+            },
+            "bbox": [
+                102,
+                885,
+                127,
+                900
+            ]
+        }
+    ],
+    [
+        {
+            "type": "table",
+            "content": {
+                "image_source": {
+                    "path": "images/"
+                },
+                "table_caption": [],
+                "table_footnote": [],
+                "html": "",
+                "table_type": "simple_table",
+                "table_nest_level": 1
+            },
+            "bbox": [
+                92,
+                114,
+                899,
+                854
+            ]
+        },
+        {
+            "type": "page_aside_text",
+            "content": {
+                "page_aside_text_content": [
+                    {
+                        "type": "text",
+                        "content": "第一章 汽车自诊断概论"
+                    }
+                ]
+            },
+            "bbox": [
+                946,
+                95,
+                969,
+                219
+            ]
+        },
+        {
+            "type": "page_number",
+            "content": {
+                "page_number_content": [
+                    {
+                        "type": "text",
+                        "content": "17"
+                    }
+                ]
+            },
+            "bbox": [
+                860,
+                875,
+                885,
+                890
+            ]
+        }
+    ],
+    [
+        {
+            "type": "table",
+            "content": {
+                "image_source": {
+                    "path": "images/"
+                },
+                "table_caption": [],
+                "table_footnote": [],
+                "html": "",
+                "table_type": "simple_table",
+                "table_nest_level": 1
+            },
+            "bbox": [
+                87,
+                120,
+                895,
+                863
+            ]
+        },
+        {
+            "type": "page_aside_text",
+            "content": {
+                "page_aside_text_content": [
+                    {
+                        "type": "text",
+                        "content": "第一章 汽车自诊断概论"
+                    }
+                ]
+            },
+            "bbox": [
+                25,
+                104,
+                45,
+                227
+            ]
+        },
+        {
+            "type": "page_number",
+            "content": {
+                "page_number_content": [
+                    {
+                        "type": "text",
+                        "content": "18"
+                    }
+                ]
+            },
+            "bbox": [
+                100,
+                882,
+                124,
+                896
+            ]
+        }
+    ],
+    [
+        {
+            "type": "table",
+            "content": {
+                "image_source": {
+                    "path": "images/"
+                },
+                "table_caption": [],
+                "table_footnote": [],
+                "html": "",
+                "table_type": "simple_table",
+                "table_nest_level": 1
+            },
+            "bbox": [
+                87,
+                117,
+                895,
+                835
+            ]
+        },
+        {
+            "type": "page_aside_text",
+            "content": {
+                "page_aside_text_content": [
+                    {
+                        "type": "text",
+                        "content": "第一章 汽车自诊断概论"
+                    }
+                ]
+            },
+            "bbox": [
+                947,
+                107,
+                968,
+                227
+            ]
+        },
+        {
+            "type": "page_number",
+            "content": {
+                "page_number_content": [
+                    {
+                        "type": "text",
+                        "content": "19"
+                    }
+                ]
+            },
+            "bbox": [
+                853,
+                881,
+                878,
+                896
+            ]
+        }
+    ],
+    [
+        {
+            "type": "table",
+            "content": {
+                "image_source": {
+                    "path": "images/"
+                },
+                "table_caption": [],
+                "table_footnote": [],
+                "html": "",
+                "table_type": "simple_table",
+                "table_nest_level": 1
+            },
+            "bbox": [
+                92,
+                122,
+                899,
+                866
+            ]
+        },
+        {
+            "type": "page_aside_text",
+            "content": {
+                "page_aside_text_content": [
+                    {
+                        "type": "text",
+                        "content": "第一章 汽车自诊断概论"
+                    }
+                ]
+            },
+            "bbox": [
+                25,
+                108,
+                45,
+                233
+            ]
+        },
+        {
+            "type": "page_number",
+            "content": {
+                "page_number_content": [
+                    {
+                        "type": "text",
+                        "content": "20"
+                    }
+                ]
+            },
+            "bbox": [
+                109,
+                888,
+                136,
+                902
+            ]
+        }
+    ],
+    [
+        {
+            "type": "table",
+            "content": {
+                "image_source": {
+                    "path": "images/"
+                },
+                "table_caption": [],
+                "table_footnote": [],
+                "html": "",
+                "table_type": "simple_table",
+                "table_nest_level": 1
+            },
+            "bbox": [
+                85,
+                117,
+                892,
+                857
+            ]
+        },
+        {
+            "type": "page_aside_text",
+            "content": {
+                "page_aside_text_content": [
+                    {
+                        "type": "text",
+                        "content": "第一章 汽车自诊断概论"
+                    }
+                ]
+            },
+            "bbox": [
+                942,
+                99,
+                966,
+                224
+            ]
+        },
+        {
+            "type": "page_number",
+            "content": {
+                "page_number_content": [
+                    {
+                        "type": "text",
+                        "content": "21"
+                    }
+                ]
+            },
+            "bbox": [
+                850,
+                878,
+                875,
+                894
+            ]
+        }
+    ],
+    [
+        {
+            "type": "table",
+            "content": {
+                "image_source": {
+                    "path": "images/"
+                },
+                "table_caption": [],
+                "table_footnote": [],
+                "html": "",
+                "table_type": "simple_table",
+                "table_nest_level": 1
+            },
+            "bbox": [
+                92,
+                122,
+                900,
+                800
+            ]
+        },
+        {
+            "type": "page_aside_text",
+            "content": {
+                "page_aside_text_content": [
+                    {
+                        "type": "text",
+                        "content": "第一章 汽车自诊断概论"
+                    }
+                ]
+            },
+            "bbox": [
+                26,
+                114,
+                47,
+                235
+            ]
+        },
+        {
+            "type": "page_number",
+            "content": {
+                "page_number_content": [
+                    {
+                        "type": "text",
+                        "content": "22"
+                    }
+                ]
+            },
+            "bbox": [
+                110,
+                885,
+                137,
+                901
+            ]
+        }
+    ],
+    [
+        {
+            "type": "table",
+            "content": {
+                "image_source": {
+                    "path": "images/"
+                },
+                "table_caption": [],
+                "table_footnote": [],
+                "html": "",
+                "table_type": "simple_table",
+                "table_nest_level": 1
+            },
+            "bbox": [
+                87,
+                114,
+                897,
+                788
+            ]
+        },
+        {
+            "type": "page_aside_text",
+            "content": {
+                "page_aside_text_content": [
+                    {
+                        "type": "text",
+                        "content": "第一章 汽车自诊断概论"
+                    }
+                ]
+            },
+            "bbox": [
+                947,
+                99,
+                968,
+                222
+            ]
+        },
+        {
+            "type": "page_number",
+            "content": {
+                "page_number_content": [
+                    {
+                        "type": "text",
+                        "content": "23"
+                    }
+                ]
+            },
+            "bbox": [
+                850,
+                878,
+                877,
+                892
+            ]
+        }
+    ],
+    [
+        {
+            "type": "table",
+            "content": {
+                "image_source": {
+                    "path": "images/"
+                },
+                "table_caption": [],
+                "table_footnote": [],
+                "html": "",
+                "table_type": "simple_table",
+                "table_nest_level": 1
+            },
+            "bbox": [
+                97,
+                122,
+                902,
+                841
+            ]
+        },
+        {
+            "type": "page_aside_text",
+            "content": {
+                "page_aside_text_content": [
+                    {
+                        "type": "text",
+                        "content": "第一章 汽车自诊断概论"
+                    }
+                ]
+            },
+            "bbox": [
+                31,
+                105,
+                52,
+                230
+            ]
+        },
+        {
+            "type": "page_number",
+            "content": {
+                "page_number_content": [
+                    {
+                        "type": "text",
+                        "content": "24"
+                    }
+                ]
+            },
+            "bbox": [
+                110,
+                885,
+                137,
+                900
+            ]
+        }
+    ],
+    [
+        {
+            "type": "table",
+            "content": {
+                "image_source": {
+                    "path": "images/"
+                },
+                "table_caption": [],
+                "table_footnote": [],
+                "html": "",
+                "table_type": "simple_table",
+                "table_nest_level": 1
+            },
+            "bbox": [
+                90,
+                114,
+                897,
+                832
+            ]
+        },
+        {
+            "type": "page_aside_text",
+            "content": {
+                "page_aside_text_content": [
+                    {
+                        "type": "text",
+                        "content": "第一章 汽车自诊断概论"
+                    }
+                ]
+            },
+            "bbox": [
+                947,
+                98,
+                969,
+                221
+            ]
+        },
+        {
+            "type": "page_number",
+            "content": {
+                "page_number_content": [
+                    {
+                        "type": "text",
+                        "content": "25"
+                    }
+                ]
+            },
+            "bbox": [
+                855,
+                876,
+                882,
+                892
+            ]
+        }
+    ],
+    [
+        {
+            "type": "table",
+            "content": {
+                "image_source": {
+                    "path": "images/"
+                },
+                "table_caption": [],
+                "table_footnote": [],
+                "html": "",
+                "table_type": "simple_table",
+                "table_nest_level": 1
+            },
+            "bbox": [
+                95,
+                118,
+                900,
+                863
+            ]
+        },
+        {
+            "type": "page_aside_text",
+            "content": {
+                "page_aside_text_content": [
+                    {
+                        "type": "text",
+                        "content": "第一章 汽车自诊断概论"
+                    }
+                ]
+            },
+            "bbox": [
+                28,
+                102,
+                50,
+                227
+            ]
+        },
+        {
+            "type": "page_number",
+            "content": {
+                "page_number_content": [
+                    {
+                        "type": "text",
+                        "content": "26"
+                    }
+                ]
+            },
+            "bbox": [
+                107,
+                882,
+                132,
+                897
+            ]
+        }
+    ],
+    [
+        {
+            "type": "table",
+            "content": {
+                "image_source": {
+                    "path": "images/"
+                },
+                "table_caption": [],
+                "table_footnote": [],
+                "html": "",
+                "table_type": "simple_table",
+                "table_nest_level": 1
+            },
+            "bbox": [
+                85,
+                114,
+                894,
+                831
+            ]
+        },
+        {
+            "type": "page_aside_text",
+            "content": {
+                "page_aside_text_content": [
+                    {
+                        "type": "text",
+                        "content": "第一章 汽车自诊断概论"
+                    }
+                ]
+            },
+            "bbox": [
+                942,
+                96,
+                964,
+                219
+            ]
+        },
+        {
+            "type": "page_number",
+            "content": {
+                "page_number_content": [
+                    {
+                        "type": "text",
+                        "content": "27"
+                    }
+                ]
+            },
+            "bbox": [
+                853,
+                875,
+                878,
+                890
+            ]
+        }
+    ],
+    [
+        {
+            "type": "table",
+            "content": {
+                "image_source": {
+                    "path": "images/"
+                },
+                "table_caption": [],
+                "table_footnote": [],
+                "html": "",
+                "table_type": "simple_table",
+                "table_nest_level": 1
+            },
+            "bbox": [
+                97,
+                116,
+                902,
+                837
+            ]
+        },
+        {
+            "type": "page_aside_text",
+            "content": {
+                "page_aside_text_content": [
+                    {
+                        "type": "text",
+                        "content": "第一章 汽车自诊断概论"
+                    }
+                ]
+            },
+            "bbox": [
+                33,
+                99,
+                52,
+                223
+            ]
+        },
+        {
+            "type": "page_number",
+            "content": {
+                "page_number_content": [
+                    {
+                        "type": "text",
+                        "content": "28"
+                    }
+                ]
+            },
+            "bbox": [
+                110,
+                879,
+                136,
+                894
+            ]
+        }
+    ],
+    [
+        {
+            "type": "table",
+            "content": {
+                "image_source": {
+                    "path": "images/"
+                },
+                "table_caption": [],
+                "table_footnote": [],
+                "html": "",
+                "table_type": "simple_table",
+                "table_nest_level": 1
+            },
+            "bbox": [
+                94,
+                112,
+                897,
+                828
+            ]
+        },
+        {
+            "type": "page_number",
+            "content": {
+                "page_number_content": [
+                    {
+                        "type": "text",
+                        "content": "29"
+                    }
+                ]
+            },
+            "bbox": [
+                858,
+                873,
+                885,
+                889
+            ]
+        }
+    ],
+    [
+        {
+            "type": "table",
+            "content": {
+                "image_source": {
+                    "path": "images/"
+                },
+                "table_caption": [],
+                "table_footnote": [],
+                "html": "",
+                "table_type": "simple_table",
+                "table_nest_level": 1
+            },
+            "bbox": [
+                92,
+                116,
+                895,
+                859
+            ]
+        },
+        {
+            "type": "page_aside_text",
+            "content": {
+                "page_aside_text_content": [
+                    {
+                        "type": "text",
+                        "content": "第一章 汽车自诊断概论"
+                    }
+                ]
+            },
+            "bbox": [
+                28,
+                99,
+                48,
+                224
+            ]
+        },
+        {
+            "type": "page_number",
+            "content": {
+                "page_number_content": [
+                    {
+                        "type": "text",
+                        "content": "30"
+                    }
+                ]
+            },
+            "bbox": [
+                102,
+                878,
+                129,
+                892
+            ]
+        }
+    ],
+    [
+        {
+            "type": "table",
+            "content": {
+                "image_source": {
+                    "path": "images/"
+                },
+                "table_caption": [],
+                "table_footnote": [],
+                "html": "",
+                "table_type": "simple_table",
+                "table_nest_level": 1
+            },
+            "bbox": [
+                92,
+                117,
+                897,
+                841
+            ]
+        },
+        {
+            "type": "page_aside_text",
+            "content": {
+                "page_aside_text_content": [
+                    {
+                        "type": "text",
+                        "content": "第一章 汽车自诊断概论"
+                    }
+                ]
+            },
+            "bbox": [
+                947,
+                101,
+                969,
+                223
+            ]
+        },
+        {
+            "type": "page_number",
+            "content": {
+                "page_number_content": [
+                    {
+                        "type": "text",
+                        "content": "31"
+                    }
+                ]
+            },
+            "bbox": [
+                858,
+                879,
+                882,
+                895
+            ]
+        }
+    ],
+    [
+        {
+            "type": "table",
+            "content": {
+                "image_source": {
+                    "path": "images/"
+                },
+                "table_caption": [],
+                "table_footnote": [],
+                "html": "",
+                "table_type": "simple_table",
+                "table_nest_level": 1
+            },
+            "bbox": [
+                90,
+                120,
+                895,
+                843
+            ]
+        },
+        {
+            "type": "page_aside_text",
+            "content": {
+                "page_aside_text_content": [
+                    {
+                        "type": "text",
+                        "content": "第一章 汽车自诊断概论"
+                    }
+                ]
+            },
+            "bbox": [
+                26,
+                105,
+                47,
+                228
+            ]
+        },
+        {
+            "type": "page_number",
+            "content": {
+                "page_number_content": [
+                    {
+                        "type": "text",
+                        "content": "32"
+                    }
+                ]
+            },
+            "bbox": [
+                104,
+                884,
+                129,
+                898
+            ]
+        }
+    ],
+    [
+        {
+            "type": "table",
+            "content": {
+                "image_source": {
+                    "path": "images/"
+                },
+                "table_caption": [],
+                "table_footnote": [],
+                "html": "",
+                "table_type": "simple_table",
+                "table_nest_level": 1
+            },
+            "bbox": [
+                87,
+                114,
+                895,
+                854
+            ]
+        },
+        {
+            "type": "page_aside_text",
+            "content": {
+                "page_aside_text_content": [
+                    {
+                        "type": "text",
+                        "content": "第一章 汽车自诊断概论"
+                    }
+                ]
+            },
+            "bbox": [
+                927,
+                93,
+                966,
+                288
+            ]
+        },
+        {
+            "type": "page_number",
+            "content": {
+                "page_number_content": [
+                    {
+                        "type": "text",
+                        "content": "33"
+                    }
+                ]
+            },
+            "bbox": [
+                853,
+                876,
+                880,
+                891
+            ]
+        }
+    ],
+    [
+        {
+            "type": "table",
+            "content": {
+                "image_source": {
+                    "path": "images/"
+                },
+                "table_caption": [],
+                "table_footnote": [],
+                "html": "",
+                "table_type": "simple_table",
+                "table_nest_level": 1
+            },
+            "bbox": [
+                95,
+                120,
+                902,
+                841
+            ]
+        },
+        {
+            "type": "page_aside_text",
+            "content": {
+                "page_aside_text_content": [
+                    {
+                        "type": "text",
+                        "content": "第一章 汽车自诊断概论"
+                    }
+                ]
+            },
+            "bbox": [
+                31,
+                104,
+                52,
+                227
+            ]
+        },
+        {
+            "type": "page_number",
+            "content": {
+                "page_number_content": [
+                    {
+                        "type": "text",
+                        "content": "34"
+                    }
+                ]
+            },
+            "bbox": [
+                107,
+                883,
+                134,
+                898
+            ]
+        }
+    ],
+    [
+        {
+            "type": "table",
+            "content": {
+                "image_source": {
+                    "path": "images/"
+                },
+                "table_caption": [],
+                "table_footnote": [],
+                "html": "",
+                "table_type": "simple_table",
+                "table_nest_level": 1
+            },
+            "bbox": [
+                95,
+                115,
+                902,
+                832
+            ]
+        },
+        {
+            "type": "page_aside_text",
+            "content": {
+                "page_aside_text_content": [
+                    {
+                        "type": "text",
+                        "content": "第一章 汽车自诊断概论"
+                    }
+                ]
+            },
+            "bbox": [
+                952,
+                98,
+                974,
+                222
+            ]
+        },
+        {
+            "type": "page_number",
+            "content": {
+                "page_number_content": [
+                    {
+                        "type": "text",
+                        "content": "35"
+                    }
+                ]
+            },
+            "bbox": [
+                860,
+                877,
+                887,
+                892
+            ]
+        }
+    ],
+    [
+        {
+            "type": "table",
+            "content": {
+                "image_source": {
+                    "path": "images/"
+                },
+                "table_caption": [],
+                "table_footnote": [],
+                "html": "",
+                "table_type": "simple_table",
+                "table_nest_level": 1
+            },
+            "bbox": [
+                87,
+                118,
+                894,
+                829
+            ]
+        },
+        {
+            "type": "page_aside_text",
+            "content": {
+                "page_aside_text_content": [
+                    {
+                        "type": "text",
+                        "content": "第一章 汽车自诊断概论"
+                    }
+                ]
+            },
+            "bbox": [
+                20,
+                99,
+                58,
+                294
+            ]
+        },
+        {
+            "type": "page_number",
+            "content": {
+                "page_number_content": [
+                    {
+                        "type": "text",
+                        "content": "36"
+                    }
+                ]
+            },
+            "bbox": [
+                102,
+                884,
+                127,
+                898
+            ]
+        }
+    ],
+    [
+        {
+            "type": "table",
+            "content": {
+                "image_source": {
+                    "path": "images/"
+                },
+                "table_caption": [],
+                "table_footnote": [],
+                "html": "",
+                "table_type": "simple_table",
+                "table_nest_level": 1
+            },
+            "bbox": [
+                87,
+                116,
+                895,
+                859
+            ]
+        },
+        {
+            "type": "page_aside_text",
+            "content": {
+                "page_aside_text_content": [
+                    {
+                        "type": "text",
+                        "content": "第一章 汽车自诊断概论"
+                    }
+                ]
+            },
+            "bbox": [
+                946,
+                99,
+                968,
+                223
+            ]
+        },
+        {
+            "type": "page_number",
+            "content": {
+                "page_number_content": [
+                    {
+                        "type": "text",
+                        "content": "37"
+                    }
+                ]
+            },
+            "bbox": [
+                853,
+                877,
+                878,
+                892
+            ]
+        }
+    ],
+    [
+        {
+            "type": "table",
+            "content": {
+                "image_source": {
+                    "path": "images/"
+                },
+                "table_caption": [],
+                "table_footnote": [],
+                "html": "",
+                "table_type": "simple_table",
+                "table_nest_level": 1
+            },
+            "bbox": [
+                97,
+                120,
+                902,
+                864
+            ]
+        },
+        {
+            "type": "page_aside_text",
+            "content": {
+                "page_aside_text_content": [
+                    {
+                        "type": "text",
+                        "content": "第一章 汽车自诊断概论"
+                    }
+                ]
+            },
+            "bbox": [
+                31,
+                103,
+                50,
+                227
+            ]
+        },
+        {
+            "type": "page_number",
+            "content": {
+                "page_number_content": [
+                    {
+                        "type": "text",
+                        "content": "38"
+                    }
+                ]
+            },
+            "bbox": [
+                110,
+                883,
+                134,
+                898
+            ]
+        }
+    ],
+    [
+        {
+            "type": "table",
+            "content": {
+                "image_source": {
+                    "path": "images/"
+                },
+                "table_caption": [],
+                "table_footnote": [],
+                "html": "",
+                "table_type": "simple_table",
+                "table_nest_level": 1
+            },
+            "bbox": [
+                82,
+                115,
+                890,
+                854
+            ]
+        },
+        {
+            "type": "page_aside_text",
+            "content": {
+                "page_aside_text_content": [
+                    {
+                        "type": "text",
+                        "content": "第一章 汽车自诊断概论"
+                    }
+                ]
+            },
+            "bbox": [
+                937,
+                96,
+                959,
+                219
+            ]
+        },
+        {
+            "type": "page_number",
+            "content": {
+                "page_number_content": [
+                    {
+                        "type": "text",
+                        "content": "39"
+                    }
+                ]
+            },
+            "bbox": [
+                852,
+                875,
+                878,
+                891
+            ]
+        }
+    ],
+    [
+        {
+            "type": "table",
+            "content": {
+                "image_source": {
+                    "path": "images/"
+                },
+                "table_caption": [],
+                "table_footnote": [],
+                "html": "",
+                "table_type": "simple_table",
+                "table_nest_level": 1
+            },
+            "bbox": [
+                99,
+                117,
+                905,
+                863
+            ]
+        },
+        {
+            "type": "page_aside_text",
+            "content": {
+                "page_aside_text_content": [
+                    {
+                        "type": "text",
+                        "content": "第一章 汽车自诊断概论"
+                    }
+                ]
+            },
+            "bbox": [
+                31,
+                103,
+                52,
+                228
+            ]
+        },
+        {
+            "type": "page_number",
+            "content": {
+                "page_number_content": [
+                    {
+                        "type": "text",
+                        "content": "40"
+                    }
+                ]
+            },
+            "bbox": [
+                115,
+                884,
+                142,
+                898
+            ]
+        }
+    ],
+    [
+        {
+            "type": "table",
+            "content": {
+                "image_source": {
+                    "path": "images/"
+                },
+                "table_caption": [],
+                "table_footnote": [],
+                "html": "",
+                "table_type": "simple_table",
+                "table_nest_level": 1
+            },
+            "bbox": [
+                90,
+                114,
+                897,
+                854
+            ]
+        },
+        {
+            "type": "page_number",
+            "content": {
+                "page_number_content": [
+                    {
+                        "type": "text",
+                        "content": "41"
+                    }
+                ]
+            },
+            "bbox": [
+                855,
+                877,
+                880,
+                892
+            ]
+        }
+    ],
+    [
+        {
+            "type": "table",
+            "content": {
+                "image_source": {
+                    "path": "images/"
+                },
+                "table_caption": [],
+                "table_footnote": [],
+                "html": "",
+                "table_type": "simple_table",
+                "table_nest_level": 1
+            },
+            "bbox": [
+                92,
+                123,
+                900,
+                844
+            ]
+        },
+        {
+            "type": "page_aside_text",
+            "content": {
+                "page_aside_text_content": [
+                    {
+                        "type": "text",
+                        "content": "第一章 汽车自诊断概论"
+                    }
+                ]
+            },
+            "bbox": [
+                28,
+                105,
+                48,
+                231
+            ]
+        },
+        {
+            "type": "page_number",
+            "content": {
+                "page_number_content": [
+                    {
+                        "type": "text",
+                        "content": "42"
+                    }
+                ]
+            },
+            "bbox": [
+                107,
+                887,
+                132,
+                902
+            ]
+        }
+    ],
+    [
+        {
+            "type": "table",
+            "content": {
+                "image_source": {
+                    "path": "images/"
+                },
+                "table_caption": [],
+                "table_footnote": [],
+                "html": "",
+                "table_type": "simple_table",
+                "table_nest_level": 1
+            },
+            "bbox": [
+                90,
+                112,
+                895,
+                829
+            ]
+        },
+        {
+            "type": "page_aside_text",
+            "content": {
+                "page_aside_text_content": [
+                    {
+                        "type": "text",
+                        "content": "第一章 汽车自诊断概论"
+                    }
+                ]
+            },
+            "bbox": [
+                942,
+                96,
+                966,
+                219
+            ]
+        },
+        {
+            "type": "page_number",
+            "content": {
+                "page_number_content": [
+                    {
+                        "type": "text",
+                        "content": "43"
+                    }
+                ]
+            },
+            "bbox": [
+                855,
+                875,
+                882,
+                890
+            ]
+        }
+    ]
+]
